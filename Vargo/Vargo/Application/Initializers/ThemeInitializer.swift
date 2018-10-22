@@ -1,0 +1,41 @@
+//
+//  ThemeInitializer.swift
+//  TheVargo
+//
+//  Created by Andre on 12/07/2018.
+//  Copyright © 2018 AndreSamples. All rights reserved.
+//
+
+import UIKit
+
+class ThemeInitializer: Initializable {
+    
+    private lazy var titleFont = UIFont(name: "Optima-Bold", size: 30)!
+    
+    func performInitialization() {
+        navigationBarAppearence()
+        tableViewAppearence()
+    }
+    
+}
+
+
+extension ThemeInitializer {
+    
+    private func navigationBarAppearence() {
+        UINavigationBar.appearance().tintColor = .black
+        UINavigationBar.appearance().barTintColor = .mainColor
+        UINavigationBar.appearance().prefersLargeTitles = true
+        let titleArr: [NSAttributedString.Key : Any] = [.foregroundColor: UIColor.black, .font: titleFont]
+        UINavigationBar.appearance().titleTextAttributes = titleArr
+        UINavigationBar.appearance().largeTitleTextAttributes = titleArr
+    }
+    
+    private func tableViewAppearence() {
+        let colorView = UIView()
+        colorView.alpha = 0.20
+        colorView.backgroundColor = UIColor.white.withAlphaComponent(0.20)
+        UITableViewCell.appearance().selectedBackgroundView = colorView
+    }
+    
+}

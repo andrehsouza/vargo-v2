@@ -12,10 +12,26 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    lazy var initializers: [Initializable] = [ThemeInitializer()]
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        initializers.forEach { $0.performInitialization() }
+        
+        let navigationMaster = UINavigationController()
+        navigationMaster.setRootWireframe(FeedListWireframe())
+        
+        let navigationDetail = UINavigationController()
+        navigationDetail.setRootWireframe(FeedDetailWireframe())
+        
+        let splitViewController = VSplitViewController()
+        splitViewController.viewControllers = [navigationMaster, navigationDetail]
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = splitViewController
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 
