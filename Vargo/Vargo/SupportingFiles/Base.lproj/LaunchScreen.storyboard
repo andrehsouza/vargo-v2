@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zCV-fE-gFq">
+                                <rect key="frame" x="68" y="312.5" width="240" height="2"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="5cA-48-KjT"/>
+                                    <constraint firstAttribute="width" constant="240" id="IJI-zy-DZB"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Vargo  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fu1-yU-mej">
+                                <rect key="frame" x="112.5" y="288.5" width="150.5" height="50"/>
+                                <color key="backgroundColor" red="0.74117647058823533" green="0.88627450980392153" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2018 Vargo.  All rights reserved" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OyX-Ci-fFm">
+                                <rect key="frame" x="110.5" y="605.5" width="154" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Videos &amp; Articles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQl-ry-NMQ">
+                                <rect key="frame" x="122" y="353.5" width="131" height="21"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo_vargo" translatesAutoresizingMaskIntoConstraints="NO" id="4Go-MR-Hvm">
+                                <rect key="frame" x="88" y="88.5" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Iy5-kO-oAs"/>
+                                    <constraint firstAttribute="height" constant="200" id="U27-7T-bpZ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.74901960784313726" green="0.88627450980392153" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OyX-Ci-fFm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2hw-KC-IW9"/>
+                            <constraint firstItem="zCV-fE-gFq" firstAttribute="centerX" secondItem="fu1-yU-mej" secondAttribute="centerX" id="LIE-8m-epb"/>
+                            <constraint firstItem="fu1-yU-mej" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TpT-Gd-JHJ"/>
+                            <constraint firstItem="oQl-ry-NMQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Tqh-Ld-0u0"/>
+                            <constraint firstItem="oQl-ry-NMQ" firstAttribute="top" secondItem="fu1-yU-mej" secondAttribute="bottom" constant="15" id="Umb-Hr-dk6"/>
+                            <constraint firstItem="4Go-MR-Hvm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dp9-3M-aH7"/>
+                            <constraint firstItem="fu1-yU-mej" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-30" id="huV-pL-k7L"/>
+                            <constraint firstItem="zCV-fE-gFq" firstAttribute="centerY" secondItem="fu1-yU-mej" secondAttribute="centerY" id="i9k-y4-yXR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OyX-Ci-fFm" secondAttribute="bottom" constant="30" id="qQA-Rl-FTn"/>
+                            <constraint firstItem="fu1-yU-mej" firstAttribute="top" secondItem="4Go-MR-Hvm" secondAttribute="bottom" id="yMH-Gc-2GL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_logo_vargo" width="240" height="240"/>
+    </resources>
+</document>

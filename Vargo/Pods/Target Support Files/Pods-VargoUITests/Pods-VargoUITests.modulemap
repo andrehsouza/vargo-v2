@@ -1,0 +1,6 @@
+framework module Pods_VargoUITests {
+  umbrella header "Pods-VargoUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

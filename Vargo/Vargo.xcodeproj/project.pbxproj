@@ -1,0 +1,872 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A36D7165DCB01B791D01699 /* Pods_VargoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED0D35CAC2C8366658CB55B /* Pods_VargoUITests.framework */; };
+		48344229912A84027670B12E /* Pods_Vargo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D14C212E14FD580FC72C07CB /* Pods_Vargo.framework */; };
+		4D1F22CA91AC3E33BFA4DFFE /* Pods_VargoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2E46C5026B48AAF82DE568 /* Pods_VargoTests.framework */; };
+		7BCA393E217E103900F7AAB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA393D217E103900F7AAB4 /* AppDelegate.swift */; };
+		7BCA3953217E103A00F7AAB4 /* VargoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA3952217E103A00F7AAB4 /* VargoTests.swift */; };
+		7BCA395E217E103A00F7AAB4 /* VargoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA395D217E103A00F7AAB4 /* VargoUITests.swift */; };
+		7BCA3975217E12DB00F7AAB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BCA3974217E12DB00F7AAB4 /* Assets.xcassets */; };
+		7BCA397B217E130600F7AAB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BCA3977217E130600F7AAB4 /* LaunchScreen.storyboard */; };
+		7BCA397C217E130600F7AAB4 /* Optima-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BCA397A217E130600F7AAB4 /* Optima-Bold.ttf */; };
+		7BCA3981217E13A200F7AAB4 /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA397D217E13A200F7AAB4 /* PresenterInterface.swift */; };
+		7BCA3982217E13A200F7AAB4 /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA397E217E13A200F7AAB4 /* ViewInterface.swift */; };
+		7BCA3983217E13A200F7AAB4 /* InteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA397F217E13A200F7AAB4 /* InteractorInterface.swift */; };
+		7BCA3984217E13A200F7AAB4 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA3980217E13A200F7AAB4 /* BaseWireframe.swift */; };
+		7BCA3987217E154B00F7AAB4 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA3986217E154B00F7AAB4 /* UINavigationController+Extension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7BCA394F217E103A00F7AAB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BCA3932217E103900F7AAB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BCA3939217E103900F7AAB4;
+			remoteInfo = Vargo;
+		};
+		7BCA395A217E103A00F7AAB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BCA3932217E103900F7AAB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BCA3939217E103900F7AAB4;
+			remoteInfo = Vargo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1E5F38FF0FD9D73C7DA66E3F /* Pods-VargoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VargoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VargoTests/Pods-VargoTests.release.xcconfig"; sourceTree = "<group>"; };
+		35F4420738C03F1AF808EDCF /* Pods-Vargo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vargo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vargo/Pods-Vargo.release.xcconfig"; sourceTree = "<group>"; };
+		3ED0D35CAC2C8366658CB55B /* Pods_VargoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VargoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AB0661FDC4C73FB5929B287 /* Pods-VargoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VargoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VargoUITests/Pods-VargoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		71E5C2E49EA86C323967A89D /* Pods-Vargo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vargo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vargo/Pods-Vargo.debug.xcconfig"; sourceTree = "<group>"; };
+		79A5E764093A0CF08E4B918D /* Pods-VargoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VargoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VargoTests/Pods-VargoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7BCA393A217E103900F7AAB4 /* Vargo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vargo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BCA393D217E103900F7AAB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7BCA3949217E103A00F7AAB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BCA394E217E103A00F7AAB4 /* VargoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VargoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BCA3952217E103A00F7AAB4 /* VargoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VargoTests.swift; sourceTree = "<group>"; };
+		7BCA3954217E103A00F7AAB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BCA3959217E103A00F7AAB4 /* VargoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VargoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BCA395D217E103A00F7AAB4 /* VargoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VargoUITests.swift; sourceTree = "<group>"; };
+		7BCA395F217E103A00F7AAB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BCA3974217E12DB00F7AAB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7BCA3978217E130600F7AAB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7BCA397A217E130600F7AAB4 /* Optima-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Optima-Bold.ttf"; sourceTree = "<group>"; };
+		7BCA397D217E13A200F7AAB4 /* PresenterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
+		7BCA397E217E13A200F7AAB4 /* ViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
+		7BCA397F217E13A200F7AAB4 /* InteractorInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorInterface.swift; sourceTree = "<group>"; };
+		7BCA3980217E13A200F7AAB4 /* BaseWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
+		7BCA3986217E154B00F7AAB4 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
+		7C2E46C5026B48AAF82DE568 /* Pods_VargoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VargoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1ACF890D34B43AA862550A /* Pods-VargoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VargoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VargoUITests/Pods-VargoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D14C212E14FD580FC72C07CB /* Pods_Vargo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vargo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7BCA3937217E103900F7AAB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48344229912A84027670B12E /* Pods_Vargo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BCA394B217E103A00F7AAB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D1F22CA91AC3E33BFA4DFFE /* Pods_VargoTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BCA3956217E103A00F7AAB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A36D7165DCB01B791D01699 /* Pods_VargoUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		775AD976292D37A0AD870C1A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				71E5C2E49EA86C323967A89D /* Pods-Vargo.debug.xcconfig */,
+				35F4420738C03F1AF808EDCF /* Pods-Vargo.release.xcconfig */,
+				79A5E764093A0CF08E4B918D /* Pods-VargoTests.debug.xcconfig */,
+				1E5F38FF0FD9D73C7DA66E3F /* Pods-VargoTests.release.xcconfig */,
+				8D1ACF890D34B43AA862550A /* Pods-VargoUITests.debug.xcconfig */,
+				4AB0661FDC4C73FB5929B287 /* Pods-VargoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7BCA3931217E103900F7AAB4 = {
+			isa = PBXGroup;
+			children = (
+				7BCA393C217E103900F7AAB4 /* Vargo */,
+				7BCA3951217E103A00F7AAB4 /* VargoTests */,
+				7BCA395C217E103A00F7AAB4 /* VargoUITests */,
+				7BCA393B217E103900F7AAB4 /* Products */,
+				775AD976292D37A0AD870C1A /* Pods */,
+				9CECD17FAF3CCEC7B7BD0782 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7BCA393B217E103900F7AAB4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7BCA393A217E103900F7AAB4 /* Vargo.app */,
+				7BCA394E217E103A00F7AAB4 /* VargoTests.xctest */,
+				7BCA3959217E103A00F7AAB4 /* VargoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7BCA393C217E103900F7AAB4 /* Vargo */ = {
+			isa = PBXGroup;
+			children = (
+				7BCA396B217E105000F7AAB4 /* Application */,
+				7BCA396C217E105700F7AAB4 /* Common */,
+				7BCA3971217E109300F7AAB4 /* Modules */,
+				7BCA3972217E10A300F7AAB4 /* Resources */,
+				7BCA3973217E10B000F7AAB4 /* SupportingFiles */,
+			);
+			path = Vargo;
+			sourceTree = "<group>";
+		};
+		7BCA3951217E103A00F7AAB4 /* VargoTests */ = {
+			isa = PBXGroup;
+			children = (
+				7BCA3952217E103A00F7AAB4 /* VargoTests.swift */,
+				7BCA3954217E103A00F7AAB4 /* Info.plist */,
+			);
+			path = VargoTests;
+			sourceTree = "<group>";
+		};
+		7BCA395C217E103A00F7AAB4 /* VargoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7BCA395D217E103A00F7AAB4 /* VargoUITests.swift */,
+				7BCA395F217E103A00F7AAB4 /* Info.plist */,
+			);
+			path = VargoUITests;
+			sourceTree = "<group>";
+		};
+		7BCA396B217E105000F7AAB4 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				7BCA393D217E103900F7AAB4 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		7BCA396C217E105700F7AAB4 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7BCA396D217E106500F7AAB4 /* VIPER */,
+				7BCA3985217E151F00F7AAB4 /* Extensions */,
+				7BCA396E217E107300F7AAB4 /* Util */,
+				7BCA396F217E107800F7AAB4 /* Service */,
+				7BCA3970217E108400F7AAB4 /* Model */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7BCA396D217E106500F7AAB4 /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+				7BCA3980217E13A200F7AAB4 /* BaseWireframe.swift */,
+				7BCA397F217E13A200F7AAB4 /* InteractorInterface.swift */,
+				7BCA397D217E13A200F7AAB4 /* PresenterInterface.swift */,
+				7BCA397E217E13A200F7AAB4 /* ViewInterface.swift */,
+			);
+			path = VIPER;
+			sourceTree = "<group>";
+		};
+		7BCA396E217E107300F7AAB4 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		7BCA396F217E107800F7AAB4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		7BCA3970217E108400F7AAB4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7BCA3971217E109300F7AAB4 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		7BCA3972217E10A300F7AAB4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7BCA3974217E12DB00F7AAB4 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7BCA3973217E10B000F7AAB4 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				7BCA3976217E130600F7AAB4 /* Base.lproj */,
+				7BCA3979217E130600F7AAB4 /* Fonts */,
+				7BCA3949217E103A00F7AAB4 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		7BCA3976217E130600F7AAB4 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				7BCA3977217E130600F7AAB4 /* LaunchScreen.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		7BCA3979217E130600F7AAB4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7BCA397A217E130600F7AAB4 /* Optima-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		7BCA3985217E151F00F7AAB4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7BCA3986217E154B00F7AAB4 /* UINavigationController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9CECD17FAF3CCEC7B7BD0782 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D14C212E14FD580FC72C07CB /* Pods_Vargo.framework */,
+				7C2E46C5026B48AAF82DE568 /* Pods_VargoTests.framework */,
+				3ED0D35CAC2C8366658CB55B /* Pods_VargoUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7BCA3939217E103900F7AAB4 /* Vargo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BCA3962217E103A00F7AAB4 /* Build configuration list for PBXNativeTarget "Vargo" */;
+			buildPhases = (
+				C2EFDBBE2E8AF7D2C7A558D1 /* [CP] Check Pods Manifest.lock */,
+				7BCA3936217E103900F7AAB4 /* Sources */,
+				7BCA3937217E103900F7AAB4 /* Frameworks */,
+				7BCA3938217E103900F7AAB4 /* Resources */,
+				9C4B3F05D0BFC21563739057 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Vargo;
+			productName = Vargo;
+			productReference = 7BCA393A217E103900F7AAB4 /* Vargo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7BCA394D217E103A00F7AAB4 /* VargoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BCA3965217E103A00F7AAB4 /* Build configuration list for PBXNativeTarget "VargoTests" */;
+			buildPhases = (
+				A44609244E03732BF3A10501 /* [CP] Check Pods Manifest.lock */,
+				7BCA394A217E103A00F7AAB4 /* Sources */,
+				7BCA394B217E103A00F7AAB4 /* Frameworks */,
+				7BCA394C217E103A00F7AAB4 /* Resources */,
+				F94FF3FC8628D9C8763C7082 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7BCA3950217E103A00F7AAB4 /* PBXTargetDependency */,
+			);
+			name = VargoTests;
+			productName = VargoTests;
+			productReference = 7BCA394E217E103A00F7AAB4 /* VargoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7BCA3958217E103A00F7AAB4 /* VargoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BCA3968217E103A00F7AAB4 /* Build configuration list for PBXNativeTarget "VargoUITests" */;
+			buildPhases = (
+				D823A865647406BB5D93A1EF /* [CP] Check Pods Manifest.lock */,
+				7BCA3955217E103A00F7AAB4 /* Sources */,
+				7BCA3956217E103A00F7AAB4 /* Frameworks */,
+				7BCA3957217E103A00F7AAB4 /* Resources */,
+				F0CE639578CC5DBF4A51AE75 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7BCA395B217E103A00F7AAB4 /* PBXTargetDependency */,
+			);
+			name = VargoUITests;
+			productName = VargoUITests;
+			productReference = 7BCA3959217E103A00F7AAB4 /* VargoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7BCA3932217E103900F7AAB4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Andre Souza";
+				TargetAttributes = {
+					7BCA3939217E103900F7AAB4 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					7BCA394D217E103A00F7AAB4 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 7BCA3939217E103900F7AAB4;
+					};
+					7BCA3958217E103A00F7AAB4 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 7BCA3939217E103900F7AAB4;
+					};
+				};
+			};
+			buildConfigurationList = 7BCA3935217E103900F7AAB4 /* Build configuration list for PBXProject "Vargo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7BCA3931217E103900F7AAB4;
+			productRefGroup = 7BCA393B217E103900F7AAB4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7BCA3939217E103900F7AAB4 /* Vargo */,
+				7BCA394D217E103A00F7AAB4 /* VargoTests */,
+				7BCA3958217E103A00F7AAB4 /* VargoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7BCA3938217E103900F7AAB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BCA397B217E130600F7AAB4 /* LaunchScreen.storyboard in Resources */,
+				7BCA3975217E12DB00F7AAB4 /* Assets.xcassets in Resources */,
+				7BCA397C217E130600F7AAB4 /* Optima-Bold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BCA394C217E103A00F7AAB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BCA3957217E103A00F7AAB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9C4B3F05D0BFC21563739057 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Vargo/Pods-Vargo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Vargo/Pods-Vargo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A44609244E03732BF3A10501 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VargoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2EFDBBE2E8AF7D2C7A558D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Vargo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D823A865647406BB5D93A1EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VargoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0CE639578CC5DBF4A51AE75 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VargoUITests/Pods-VargoUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VargoUITests/Pods-VargoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F94FF3FC8628D9C8763C7082 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VargoTests/Pods-VargoTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VargoTests/Pods-VargoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7BCA3936217E103900F7AAB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BCA3983217E13A200F7AAB4 /* InteractorInterface.swift in Sources */,
+				7BCA3984217E13A200F7AAB4 /* BaseWireframe.swift in Sources */,
+				7BCA3981217E13A200F7AAB4 /* PresenterInterface.swift in Sources */,
+				7BCA3982217E13A200F7AAB4 /* ViewInterface.swift in Sources */,
+				7BCA393E217E103900F7AAB4 /* AppDelegate.swift in Sources */,
+				7BCA3987217E154B00F7AAB4 /* UINavigationController+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BCA394A217E103A00F7AAB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BCA3953217E103A00F7AAB4 /* VargoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BCA3955217E103A00F7AAB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BCA395E217E103A00F7AAB4 /* VargoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7BCA3950217E103A00F7AAB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BCA3939217E103900F7AAB4 /* Vargo */;
+			targetProxy = 7BCA394F217E103A00F7AAB4 /* PBXContainerItemProxy */;
+		};
+		7BCA395B217E103A00F7AAB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BCA3939217E103900F7AAB4 /* Vargo */;
+			targetProxy = 7BCA395A217E103A00F7AAB4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7BCA3977217E130600F7AAB4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BCA3978217E130600F7AAB4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7BCA3960217E103A00F7AAB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7BCA3961217E103A00F7AAB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7BCA3963217E103A00F7AAB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71E5C2E49EA86C323967A89D /* Pods-Vargo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Vargo/SupportingFiles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.andre.vargo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7BCA3964217E103A00F7AAB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35F4420738C03F1AF808EDCF /* Pods-Vargo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Vargo/SupportingFiles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.andre.vargo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7BCA3966217E103A00F7AAB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79A5E764093A0CF08E4B918D /* Pods-VargoTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 959WMEP4YD;
+				INFOPLIST_FILE = VargoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.andre.VargoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vargo.app/Vargo";
+			};
+			name = Debug;
+		};
+		7BCA3967217E103A00F7AAB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E5F38FF0FD9D73C7DA66E3F /* Pods-VargoTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 959WMEP4YD;
+				INFOPLIST_FILE = VargoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.andre.VargoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vargo.app/Vargo";
+			};
+			name = Release;
+		};
+		7BCA3969217E103A00F7AAB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D1ACF890D34B43AA862550A /* Pods-VargoUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 959WMEP4YD;
+				INFOPLIST_FILE = VargoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.andre.VargoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Vargo;
+			};
+			name = Debug;
+		};
+		7BCA396A217E103A00F7AAB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AB0661FDC4C73FB5929B287 /* Pods-VargoUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 959WMEP4YD;
+				INFOPLIST_FILE = VargoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.andre.VargoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Vargo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7BCA3935217E103900F7AAB4 /* Build configuration list for PBXProject "Vargo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BCA3960217E103A00F7AAB4 /* Debug */,
+				7BCA3961217E103A00F7AAB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BCA3962217E103A00F7AAB4 /* Build configuration list for PBXNativeTarget "Vargo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BCA3963217E103A00F7AAB4 /* Debug */,
+				7BCA3964217E103A00F7AAB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BCA3965217E103A00F7AAB4 /* Build configuration list for PBXNativeTarget "VargoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BCA3966217E103A00F7AAB4 /* Debug */,
+				7BCA3967217E103A00F7AAB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BCA3968217E103A00F7AAB4 /* Build configuration list for PBXNativeTarget "VargoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BCA3969217E103A00F7AAB4 /* Debug */,
+				7BCA396A217E103A00F7AAB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7BCA3932217E103900F7AAB4 /* Project object */;
+}
