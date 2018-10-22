@@ -1,0 +1,12 @@
+#Created by https://www.gitignore.io/api/swift
+
+## Build generated
+DerivedData
+*.xcuserstate
+
+## Settings
+*.pbxuser
+!default.pbxuser
+
+### Other
+.DS_Store
