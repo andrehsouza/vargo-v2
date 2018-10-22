@@ -25,3 +25,11 @@ protocol FeedListPresenterInterface: PresenterInterface {
 
 protocol FeedListInteractorInterface: InteractorInterface {
 }
+
+protocol FeedListItemInterface {
+    var title: String? { get }
+    var description: String? { get }
+    var imageURL: String? { get }
+    var isMarked: Bool { get }
+    var isVideo: Bool { get }
+}

@@ -8,18 +8,15 @@
 
 import UIKit
 
-enum DMFont: String {
+enum VargoFont: String {
     
-    case regular   = "SFCompactText-Regular"
-    case light     = "SFCompactText-Light"
-    case medium    = "SFCompactText-Medium"
-    case heavy     = "SFCompactText-Heavy"
+    case regular = "Optima-Bold"
     
 }
 
 extension UIFont {
     
-    convenience init(type: DMFont, size: CGFloat) {
+    convenience init(type: VargoFont, size: CGFloat) {
         self.init(name: type.rawValue, size: size)!
     }
     
