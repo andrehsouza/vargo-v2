@@ -28,3 +28,51 @@ extension FeedContent {
         }
     }
 }
+
+// MARK: - Image URL
+
+extension FeedContent {
+    
+    var imageURL: String? {
+        switch self {
+        case .article(let article):
+            return article.imageUrl
+        case .video(let video):
+            return video.thumbnail
+        }
+    }
+    
+}
+
+// MARK: - FeedItemInterface
+
+extension FeedContent: FeedListItemInterface {
+    
+    var isVideo: Bool {
+        switch self {
+        case .article(_):
+            return false
+        case .video(_):
+            return true
+        }
+    }
+    
+    var title: String? {
+        switch self {
+        case .article(let article):
+            return article.title
+        case .video(let video):
+            return video.title
+        }
+    }
+    
+    var description: String? {
+        switch self {
+        case .article(let article):
+            return article.description
+        case .video(_):
+            return "Watch it now!"
+        }
+    }
+
+}

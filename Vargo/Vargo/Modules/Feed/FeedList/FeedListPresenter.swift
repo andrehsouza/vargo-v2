@@ -17,6 +17,9 @@ final class FeedListPresenter {
     private unowned var _view: FeedListViewInterface
     private var _interactor: FeedListInteractorInterface
     private var _wireframe: FeedListWireframeInterface
+    
+    private var _isLoading: Bool = false
+    private var _feed: Feed = Feed()
 
     // MARK: - Lifecycle -
 
@@ -30,4 +33,83 @@ final class FeedListPresenter {
 // MARK: - Extensions -
 
 extension FeedListPresenter: FeedListPresenterInterface {
+    
+    func loadItems() {
+        _view.showFooterLoading(true)
+        _view.showLoading(false)
+        requestFeedList()
+    }
+    
+    func numberOfSections() -> Int {
+        return 1
+    }
+    
+    func numberOfItems() -> Int {
+        return _feed.items.count
+    }
+    
+    func didSelectItem(at indexPath: IndexPath) {
+        //TODO
+    }
+    
+    func item(at indexPath: IndexPath) -> FeedListItemInterface? {
+        return _feed.items[safeIndex: indexPath.row]
+    }
+    
+    func loadThumbnail(_ imageView: UIImageView, at indexPath: IndexPath) {
+        guard let item = _feed.items[safeIndex: indexPath.row] else { return }
+        if let urlString = item.imageURL, let url = URL(string: urlString) {
+            imageView.af_setImage(withURL: url, placeholderImage: UIImage(named: "ic_place_holder"))
+        } else {
+            imageView.image = UIImage(named: "ic_place_holder")
+        }
+    }
+    
+}
+
+// MARK: - private funcs
+
+extension FeedListPresenter {
+    
+    @objc private func retryRequest() {
+        _view.showFooterLoading(false)
+        _view.showLoading(true)
+        requestFeedList()
+    }
+    
+   private func requestFeedList() {
+        if _feed.page < _feed.totalPages {
+            if !_isLoading {
+                _isLoading = true
+                _interactor.getFeeds(page: (_feed.page+1), completion: { [weak self] result in
+                    self?._handleFeedResult(result)
+                })
+            }
+        } else {
+            _view.showFooterUpdatedMessage(message: "You're up to date! 🎉")
+        }
+    }
+    
+    private func _handleFeedResult(_ result: RequestResultType<Feed>) {
+        _isLoading = false
+        switch result {
+        case .success(let feed):
+            incrementFeed(feed)
+            _view.showLoading(false)
+            _view.showFooterLoading(true)
+            _view.reloadData()
+            break
+        case .failure(let errorResponse):
+            _view.showError(error: errorResponse, target: self, action: #selector(self.retryRequest))
+            break
+        }
+    }
+    
+    //Necessary to simulate pagination
+    private func incrementFeed(_ feed: Feed) {
+        _feed.page = feed.page
+        _feed.totalPages = feed.totalPages
+        _feed.items.append(contentsOf: feed.items)
+    }
+    
 }

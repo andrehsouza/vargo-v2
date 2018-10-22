@@ -57,6 +57,7 @@
 		7BCA39E4217E637800F7AAB4 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39E2217E637800F7AAB4 /* ErrorResponse.swift */; };
 		7BCA39E7217E639300F7AAB4 /* RelatedVideoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39E5217E639300F7AAB4 /* RelatedVideoService.swift */; };
 		7BCA39E8217E639300F7AAB4 /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39E6217E639300F7AAB4 /* FeedService.swift */; };
+		7BCA39EA217E6F2000F7AAB4 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39E9217E6F2000F7AAB4 /* Array+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +137,7 @@
 		7BCA39E2217E637800F7AAB4 /* ErrorResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		7BCA39E5217E639300F7AAB4 /* RelatedVideoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelatedVideoService.swift; sourceTree = "<group>"; };
 		7BCA39E6217E639300F7AAB4 /* FeedService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedService.swift; sourceTree = "<group>"; };
+		7BCA39E9217E6F2000F7AAB4 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		7C2E46C5026B48AAF82DE568 /* Pods_VargoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VargoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1ACF890D34B43AA862550A /* Pods-VargoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VargoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VargoUITests/Pods-VargoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D14C212E14FD580FC72C07CB /* Pods_Vargo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vargo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -345,6 +347,7 @@
 				7BCA398D217E2B4900F7AAB4 /* UIColor+Extension.swift */,
 				7BCA3996217E334D00F7AAB4 /* UIStoryboard+Extension.swift */,
 				7BCA39C0217E46E400F7AAB4 /* UIFont+Extension.swift */,
+				7BCA39E9217E6F2000F7AAB4 /* Array+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -747,6 +750,7 @@
 				7BCA399E217E351D00F7AAB4 /* FeedListPresenter.swift in Sources */,
 				7BCA39E3217E637800F7AAB4 /* ResponseType.swift in Sources */,
 				7BCA3990217E2BDF00F7AAB4 /* NSObject+Extension.swift in Sources */,
+				7BCA39EA217E6F2000F7AAB4 /* Array+Extension.swift in Sources */,
 				7BCA398C217E2AEA00F7AAB4 /* Initializable.swift in Sources */,
 				7BCA399F217E351D00F7AAB4 /* FeedListViewController.swift in Sources */,
 				7BCA39CA217E5B3000F7AAB4 /* FeedContent.swift in Sources */,

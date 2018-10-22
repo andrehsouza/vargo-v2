@@ -37,4 +37,25 @@ final class FeedListViewController: UIViewController {
 // MARK: - Extensions -
 
 extension FeedListViewController: FeedListViewInterface {
+    
+    func reloadData() {
+        
+    }
+    
+    func showLoading(_ loading: Bool) {
+        
+    }
+    
+    func showFooterLoading(_ loading: Bool) {
+        
+    }
+    
+    func showFooterUpdatedMessage(message: String) {
+        
+    }
+    
+    func showError(error: ErrorInterface, target: Any, action: Selector) {
+        
+    }
+    
 }
