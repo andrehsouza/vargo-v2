@@ -26,6 +26,7 @@ final class FeedDetailWireframe: BaseWireframe {
         let interactor = FeedDetailInteractor()
         let presenter = FeedDetailPresenter(wireframe: self, view: moduleViewController, interactor: interactor)
         moduleViewController.presenter = presenter
+        interactor.presenter = presenter
     }
 
 }

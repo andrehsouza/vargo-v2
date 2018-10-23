@@ -60,8 +60,6 @@
 		7BCA39DF217E623B00F7AAB4 /* VUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39DE217E623B00F7AAB4 /* VUrl.swift */; };
 		7BCA39E3217E637800F7AAB4 /* ResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39E1217E637800F7AAB4 /* ResponseType.swift */; };
 		7BCA39E4217E637800F7AAB4 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39E2217E637800F7AAB4 /* ErrorResponse.swift */; };
-		7BCA39E7217E639300F7AAB4 /* RelatedVideoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39E5217E639300F7AAB4 /* RelatedVideoService.swift */; };
-		7BCA39E8217E639300F7AAB4 /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39E6217E639300F7AAB4 /* FeedService.swift */; };
 		7BCA39EA217E6F2000F7AAB4 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39E9217E6F2000F7AAB4 /* Array+Extension.swift */; };
 		7BF528D8217EB47E002F1189 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF528D6217EB47D002F1189 /* UITableView+Extension.swift */; };
 		7BF528D9217EB47E002F1189 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF528D7217EB47E002F1189 /* UITableViewCell+Extension.swift */; };
@@ -152,8 +150,6 @@
 		7BCA39DE217E623B00F7AAB4 /* VUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VUrl.swift; sourceTree = "<group>"; };
 		7BCA39E1217E637800F7AAB4 /* ResponseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseType.swift; sourceTree = "<group>"; };
 		7BCA39E2217E637800F7AAB4 /* ErrorResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
-		7BCA39E5217E639300F7AAB4 /* RelatedVideoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelatedVideoService.swift; sourceTree = "<group>"; };
-		7BCA39E6217E639300F7AAB4 /* FeedService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedService.swift; sourceTree = "<group>"; };
 		7BCA39E9217E6F2000F7AAB4 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		7BF528D6217EB47D002F1189 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		7BF528D7217EB47E002F1189 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
@@ -316,8 +312,6 @@
 			isa = PBXGroup;
 			children = (
 				7BCA39CF217E5C8B00F7AAB4 /* APIService.swift */,
-				7BCA39E6217E639300F7AAB4 /* FeedService.swift */,
-				7BCA39E5217E639300F7AAB4 /* RelatedVideoService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -823,14 +817,12 @@
 				7BCA3981217E13A200F7AAB4 /* PresenterInterface.swift in Sources */,
 				7B65248A217F6C240033742D /* FeedRelatedVideoCollectionViewCell.swift in Sources */,
 				7BCA39CC217E5B3C00F7AAB4 /* Article.swift in Sources */,
-				7BCA39E8217E639300F7AAB4 /* FeedService.swift in Sources */,
 				7BCA3982217E13A200F7AAB4 /* ViewInterface.swift in Sources */,
 				7BCA39D3217E5CD500F7AAB4 /* RequestResultType.swift in Sources */,
 				7BCA39CE217E5B4900F7AAB4 /* Video.swift in Sources */,
 				7BCA393E217E103900F7AAB4 /* AppDelegate.swift in Sources */,
 				7BCA39AD217E357D00F7AAB4 /* FeedDetailInteractor.swift in Sources */,
 				7BCA39C8217E5B0F00F7AAB4 /* Feed.swift in Sources */,
-				7BCA39E7217E639300F7AAB4 /* RelatedVideoService.swift in Sources */,
 				7BCA3987217E154B00F7AAB4 /* UINavigationController+Extension.swift in Sources */,
 				7BCA39AC217E357D00F7AAB4 /* FeedDetailViewController.swift in Sources */,
 				7BCA39D0217E5C8C00F7AAB4 /* APIService.swift in Sources */,

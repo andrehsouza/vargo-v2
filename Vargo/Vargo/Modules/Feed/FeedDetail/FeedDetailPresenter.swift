@@ -29,7 +29,7 @@ final class FeedDetailPresenter {
     }
 }
 
-// MARK: - Extensions -
+// MARK: - FeedDetailPresenterInterface -
 
 extension FeedDetailPresenter: FeedDetailPresenterInterface {
     
@@ -62,11 +62,37 @@ extension FeedDetailPresenter: FeedDetailPresenterInterface {
     }
     
     func didSelectItem(at indexPath: IndexPath) {
-        
+        guard let feedContent = _feedRelatedVideos[safeIndex: indexPath.item] else { return }
+        _view.feedContent = feedContent
     }
     
     func item(at indexPath: IndexPath) -> FeedItemDetailInterface? {
         return _feedRelatedVideos[safeIndex: indexPath.item]
+    }
+    
+    func loadRelatedVideos(_ relatedVideosPage: Int?) {
+        _feedRelatedVideos = []
+        if let page = relatedVideosPage {
+            _view.showWaitingView(with: .loading)
+            _interactor.getRelatedVideos(page: page)
+        }
+    }
+    
+}
+
+// MARK: - FeedDetailPresenterInteractorInterface
+
+extension FeedDetailPresenter: FeedDetailPresenterInteractorInterface {
+    
+    func requestSuccess(_ feed: [FeedContent]) {
+        _feedRelatedVideos = feed
+        _view.showWaitingView(with: .success)
+        _view.reloadData()
+        _view.scrollCollectionToFirstItem()
+    }
+    
+    func requestFailed(_ error: ErrorResponse) {
+        _view.showWaitingView(with: .error)
     }
     
 }

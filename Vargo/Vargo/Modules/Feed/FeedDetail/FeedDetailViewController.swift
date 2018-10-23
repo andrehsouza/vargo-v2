@@ -10,6 +10,25 @@
 
 import UIKit
 
+enum FeedDetailLoadingType {
+    
+    case loading
+    case error
+    case success
+    
+    var labelText: String {
+        switch self {
+        case .loading:
+            return "Loading..."
+        case .error:
+            return "Try again"
+        case .success:
+            return ""
+        }
+    }
+    
+}
+
 final class FeedDetailViewController: UIViewController {
     
     @IBOutlet private weak var feedItemBookmarkButton: UIButton!
@@ -44,12 +63,39 @@ final class FeedDetailViewController: UIViewController {
     // MARK: - Public properties -
 
     var presenter: FeedDetailPresenterInterface!
-    var feedContent: FeedItemDetailInterface?
+    var feedContent: FeedItemDetailInterface? {
+        didSet {
+            if isViewLoaded {
+                showfeedContent()
+            }
+        }
+    }
 
     // MARK: - Lifecycle -
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        showfeedContent()
+    }
+    
+    @IBAction func touchPlay(_ sender: Any) {
+        presenter.didPressPlay()
+    }
+    
+    @IBAction func touchBookmark(_ sender: Any) {
+        presenter.didPressBookmark()
+    }
+    
+    @IBAction func touchShare(_ sender: Any) {
+        presenter.didPressShare()
+    }
+    
+    @IBAction func touchURL(_ sender: Any) {
+        presenter.didPressUrl()
+    }
+    
+    @IBAction func touchRetry(_ sender: Any) {
+        presenter.loadRelatedVideos(feedContent?.relatedVideosPage)
     }
 	
 }
@@ -57,6 +103,76 @@ final class FeedDetailViewController: UIViewController {
 // MARK: - FeedDetailViewInterface -
 
 extension FeedDetailViewController: FeedDetailViewInterface {
+    
+    func reloadData() {
+        collectionView.reloadData()
+    }
+    
+    func showfeedContent() {
+        guard let feedContent = feedContent else {
+            enableNavigationBarButtons(false)
+            return
+        }
+        
+        title = feedContent.screenTitle
+        
+        feedItemPlayerImageView.isHidden = !feedContent.isVideo
+        
+        feedItemDateLabel.text = feedContent.date
+        
+        if let urlString = feedContent.imageURL, let url = URL(string: urlString) {
+            feedItemImageView.af_setImage(withURL: url, placeholderImage: UIImage(named: "ic_place_holder"))
+        } else {
+            feedItemImageView.image = UIImage(named: "ic_place_holder")
+        }
+        
+        feedItemTitleLabel.text = feedContent.title
+        feedItemDescriptionLabel.text = feedContent.description
+        
+        feedItemAuthorsTitleLabel.text = feedContent.authorTitle
+        feedItemAuthorsLabel.text = feedContent.author
+        
+        feedItemFontTitleLabel.text = feedContent.urlTitle
+        
+        if let urlDescription = feedContent.urlDescription {
+            feedItemUrlButton.isHidden = false
+            let attText = NSMutableAttributedString(string: urlDescription, attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
+            feedItemUrlButton.setAttributedTitle(attText, for: .normal)
+        } else {
+            feedItemUrlButton.isHidden = true
+        }
+        
+        enableNavigationBarButtons(true)
+        
+        if feedContent.isVideo {
+            showRelatedVideosContainerAnimating(true)
+        } else {
+            hideRelatedVideosContainer()
+        }
+    }
+    
+    func showWaitingView(with type: FeedDetailLoadingType) {
+        switch type {
+        case .loading:
+            feedRelatedVideosLoadingLabel.text = type.labelText
+            feedRelatedVideosLoadingLabel.isHidden = false
+            feedRelatedVideosLoadingRetryButton.isHidden = true
+            feedRelatedVideosLoadingActivityIndicator.isHidden = false
+        case .error:
+            feedRelatedVideosLoadingLabel.text = type.labelText
+            feedRelatedVideosLoadingLabel.isHidden = false
+            feedRelatedVideosLoadingRetryButton.isHidden = false
+            feedRelatedVideosLoadingActivityIndicator.isHidden = true
+        case .success:
+            feedRelatedVideosLoadingLabel.isHidden = true
+            feedRelatedVideosLoadingRetryButton.isHidden = true
+            feedRelatedVideosLoadingActivityIndicator.isHidden = true
+        }
+    }
+    
+    func scrollCollectionToFirstItem() {
+        collectionView.contentOffset.x = 0
+    }
     
 }
 
@@ -70,6 +186,34 @@ extension FeedDetailViewController {
         collectionView.delegate = self
     }
     
+    private func enableNavigationBarButtons(_ enable: Bool) {
+        navigationItem.rightBarButtonItems?.forEach() { $0.isEnabled = enable }
+    }
+    
+    private func showRelatedVideosContainerAnimating(_ animating: Bool) {
+        if animating {
+            UIView.animate(withDuration: 0.6,
+                           delay: 0.0, usingSpringWithDamping: 1.0,
+                           initialSpringVelocity: 1.0,
+                           options: [.curveEaseInOut], animations: {
+                            
+                            self.feedRelatedVideosContainer.isHidden = false
+                            self.feedRelatedVideosContainerBottom.constant = 0
+                            self.view.layoutIfNeeded()
+                            
+            }, completion: { (Bool) -> Void in
+                self.presenter.loadRelatedVideos(self.feedContent?.relatedVideosPage)
+            })
+        } else {
+            self.feedRelatedVideosContainerBottom.constant = 0
+        }
+    }
+    
+    private func hideRelatedVideosContainer() {
+        feedRelatedVideosContainerBottom.constant = feedRelatedVideosContainerHeight.constant
+        feedRelatedVideosContainer.isHidden = true
+    }
+    
 }
 
 
@@ -77,7 +221,7 @@ extension FeedDetailViewController {
 
 extension FeedDetailViewController: UICollectionViewDelegate {
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    private func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         presenter.didSelectItem(at: indexPath)
     }
     

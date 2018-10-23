@@ -49,7 +49,8 @@ extension FeedListPresenter: FeedListPresenterInterface {
     }
     
     func didSelectItem(at indexPath: IndexPath) {
-        //TODO
+        guard let feedItem = _feed.items[safeIndex: indexPath.row] else { return }
+        _wireframe.navigate(to: .detail(feedItem))
     }
     
     func item(at indexPath: IndexPath) -> FeedListItemInterface? {

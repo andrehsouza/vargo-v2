@@ -11,8 +11,8 @@
 import Foundation
 
 final class FeedListInteractor {
+    typealias Entity = Feed
     var presenter: FeedListPresenterInteractorInterface?
-    fileprivate let feedService = FeedService()
 }
 
 // MARK: - FeedListInteractorInterface
@@ -20,7 +20,9 @@ final class FeedListInteractor {
 extension FeedListInteractor: FeedListInteractorInterface {
 
     func getFeed(page: Int) {
-        feedService.get(page: page, { [weak self] result in
+        let url = VUrl.path(for: .feed(page: page))
+        let service = APIService(with: url)
+        service.getData({ [weak self] (result: RequestResultType<Entity>) in
             self?._handleFeedResult(result)
         })
     }
@@ -31,7 +33,7 @@ extension FeedListInteractor: FeedListInteractorInterface {
 
 extension FeedListInteractor {
     
-    private func _handleFeedResult(_ result: RequestResultType<Feed>) {
+    private func _handleFeedResult(_ result: RequestResultType<Entity>) {
         switch result {
         case .success(let feed):
             self.presenter?.requestSuccess(feed)

@@ -11,11 +11,35 @@
 import Foundation
 
 final class FeedDetailInteractor {
-    
+    typealias Entity = [FeedContent]
+    var presenter: FeedDetailPresenterInteractorInterface?
 }
 
 // MARK: - Extensions -
 
 extension FeedDetailInteractor: FeedDetailInteractorInterface {
+    
+    func getRelatedVideos(page: Int) {
+        let url = VUrl.path(for: .relatedVideos(page: page))
+        let service = APIService(with: url)
+        service.getData({ [weak self] (result: RequestResultType<Entity>) in
+            self?._handleFeedResult(result)
+        })
+    }
+    
+}
+
+extension FeedDetailInteractor {
+    
+    private func _handleFeedResult(_ result: RequestResultType<Entity>) {
+        switch result {
+        case .success(let relatedVideos):
+            presenter?.requestSuccess(relatedVideos)
+            break
+        case .failure(let errorResponse):
+            presenter?.requestFailed(errorResponse)
+            break
+        }
+    }
     
 }
