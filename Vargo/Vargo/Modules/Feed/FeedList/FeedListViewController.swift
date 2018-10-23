@@ -110,12 +110,11 @@ extension FeedListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as FeedArticleTableViewCell
         cell.feedListItemInteraction = self
         cell.item = presenter.item(at: indexPath)
-        presenter.loadThumbnail(cell.thumbnailImageView, at: indexPath)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return presenter.heightForRow()
+        return 185
     }
     
 }
@@ -125,9 +124,9 @@ extension FeedListViewController: UITableViewDataSource {
 extension FeedListViewController: FeedListItemInteraction {
     
     func didPressBookMark(_ row: UITableViewCell) {
-        if let indexPath = tableView.indexPath(for: row) {
+        //if let indexPath = tableView.indexPath(for: row) {
             //TODO
-        }
+       //}
     }
     
 }

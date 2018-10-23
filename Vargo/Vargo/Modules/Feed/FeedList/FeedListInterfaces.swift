@@ -29,11 +29,9 @@ protocol FeedListViewInterface: ViewInterface {
 protocol FeedListPresenterInterface: PresenterInterface {
     func numberOfSections() -> Int
     func numberOfItems() -> Int
-    func heightForRow() -> CGFloat
     func willDisplayCell(at indexPath: IndexPath)
     func didSelectItem(at indexPath: IndexPath)
     func item(at indexPath: IndexPath) -> FeedListItemInterface?
-    func loadThumbnail(_ imageView: UIImageView, at indexPath: IndexPath)
 }
 
 protocol FeedListInteractorInterface: InteractorInterface {
@@ -44,4 +42,5 @@ protocol FeedListItemInterface {
     var title: String? { get }
     var description: String? { get }
     var isVideo: Bool { get }
+    var imageURL: String? { get }
 }

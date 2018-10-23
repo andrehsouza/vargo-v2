@@ -48,10 +48,6 @@ extension FeedListPresenter: FeedListPresenterInterface {
         return _feed.items.count
     }
     
-    func heightForRow() -> CGFloat {
-        return 185
-    }
-    
     func didSelectItem(at indexPath: IndexPath) {
         //TODO
     }
@@ -64,15 +60,6 @@ extension FeedListPresenter: FeedListPresenterInterface {
         let lastElement = numberOfItems() - 1
         if !_isLoading && indexPath.row == lastElement {
             requestFeedList()
-        }
-    }
-    
-    func loadThumbnail(_ imageView: UIImageView, at indexPath: IndexPath) {
-        guard let item = _feed.items[safeIndex: indexPath.row] else { return }
-        if let urlString = item.imageURL, let url = URL(string: urlString) {
-            imageView.af_setImage(withURL: url, placeholderImage: UIImage(named: "ic_place_holder"))
-        } else {
-            imageView.image = UIImage(named: "ic_place_holder")
         }
     }
     

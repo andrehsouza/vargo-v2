@@ -34,5 +34,30 @@ final class FeedListWireframe: BaseWireframe {
 extension FeedListWireframe: FeedListWireframeInterface {
 
     func navigate(to option: FeedListNavigationOption) {
+        switch option {
+        case .detail(let feedContent):
+            openFeedDetail(with: feedContent)
+        }
     }
+}
+
+
+extension FeedListWireframe {
+    
+    private func openFeedDetail(with feedContent: FeedContent) {
+        if let split = viewController.splitViewController { 
+            let controllers = split.viewControllers
+            if split.isCollapsed {
+                show(FeedDetailWireframe(feedContent: feedContent), with: .push, animated: true)
+            } else {
+                if let detailNavigation = controllers[SplitFeedComponents.detail.index] as? UINavigationController,
+                    let detailViewController = detailNavigation.topViewController as? FeedDetailViewController {
+                    detailViewController.feedContent = feedContent
+                }
+            }
+        } else {
+            show(FeedDetailWireframe(feedContent: feedContent), with: .push, animated: true)
+        }
+    }
+    
 }

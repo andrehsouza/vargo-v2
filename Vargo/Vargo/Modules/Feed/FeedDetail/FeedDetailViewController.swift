@@ -12,34 +12,39 @@ import UIKit
 
 final class FeedDetailViewController: UIViewController {
     
-    @IBOutlet weak var feedItemBookmarkButton: UIButton!
+    @IBOutlet private weak var feedItemBookmarkButton: UIButton!
     
-    @IBOutlet weak var feedItemImageView: VImageView!
-    @IBOutlet weak var feedItemPlayerImageView: UIButton!
+    @IBOutlet private weak var feedItemImageView: VImageView!
+    @IBOutlet private weak var feedItemPlayerImageView: UIButton!
     
-    @IBOutlet weak var feedItemDateLabel: UILabel!
+    @IBOutlet private weak var feedItemDateLabel: UILabel!
     
-    @IBOutlet weak var feedItemTitleLabel: UILabel!
-    @IBOutlet weak var feedItemDescriptionLabel: UILabel!
+    @IBOutlet private weak var feedItemTitleLabel: UILabel!
+    @IBOutlet private weak var feedItemDescriptionLabel: UILabel!
     
-    @IBOutlet weak var feedItemAuthorsTitleLabel: UILabel!
-    @IBOutlet weak var feedItemAuthorsLabel: UILabel!
+    @IBOutlet private weak var feedItemAuthorsTitleLabel: UILabel!
+    @IBOutlet private weak var feedItemAuthorsLabel: UILabel!
     
-    @IBOutlet weak var feedItemFontTitleLabel: UILabel!
-    @IBOutlet weak var feedItemUrlButton: UIButton!
+    @IBOutlet private weak var feedItemFontTitleLabel: UILabel!
+    @IBOutlet private weak var feedItemUrlButton: UIButton!
     
-    @IBOutlet weak var feedRelatedVideosContainerHeight: NSLayoutConstraint!
-    @IBOutlet weak var feedRelatedVideosContainerBottom: NSLayoutConstraint!
-    @IBOutlet weak var feedRelatedVideosContainer: UIView!
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var feedRelatedVideosContainerHeight: NSLayoutConstraint!
+    @IBOutlet private weak var feedRelatedVideosContainerBottom: NSLayoutConstraint!
+    @IBOutlet private weak var feedRelatedVideosContainer: UIView!
+    @IBOutlet private weak var collectionView: UICollectionView! {
+        didSet {
+            setupCollectionView()
+        }
+    }
     
-    @IBOutlet weak var feedRelatedVideosLoadingLabel: UILabel!
-    @IBOutlet weak var feedRelatedVideosLoadingRetryButton: UIButton!
-    @IBOutlet weak var feedRelatedVideosLoadingActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var feedRelatedVideosLoadingLabel: UILabel!
+    @IBOutlet private weak var feedRelatedVideosLoadingRetryButton: UIButton!
+    @IBOutlet private weak var feedRelatedVideosLoadingActivityIndicator: UIActivityIndicatorView!
 
     // MARK: - Public properties -
 
     var presenter: FeedDetailPresenterInterface!
+    var feedContent: FeedItemDetailInterface?
 
     // MARK: - Lifecycle -
 
@@ -49,7 +54,57 @@ final class FeedDetailViewController: UIViewController {
 	
 }
 
-// MARK: - Extensions -
+// MARK: - FeedDetailViewInterface -
 
 extension FeedDetailViewController: FeedDetailViewInterface {
+    
+}
+
+// MARK: - Extensions -
+
+extension FeedDetailViewController {
+    
+    private func setupCollectionView() {
+        collectionView.register(FeedRelatedVideoCollectionViewCell.self)
+        collectionView.dataSource = self
+        collectionView.delegate = self
+    }
+    
+}
+
+
+// MARK: - UICollectionViewDelegate
+
+extension FeedDetailViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.didSelectItem(at: indexPath)
+    }
+    
+}
+
+// MARK: - UICollectionViewDataSource
+
+extension FeedDetailViewController: UICollectionViewDataSource {
+    
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return presenter.numberOfItems()
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(forIndexPath: indexPath) as FeedRelatedVideoCollectionViewCell
+        cell.item = presenter.item(at: indexPath)
+        return cell
+    }
+    
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+
+extension FeedDetailViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 200, height: 110)
+    }
+    
 }

@@ -11,9 +11,11 @@
 import Foundation
 
 final class FeedDetailInteractor {
+    
 }
 
 // MARK: - Extensions -
 
 extension FeedDetailInteractor: FeedDetailInteractorInterface {
+    
 }

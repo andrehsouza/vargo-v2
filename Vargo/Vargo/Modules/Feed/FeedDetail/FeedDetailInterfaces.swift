@@ -10,18 +10,34 @@
 
 import UIKit
 
-enum FeedDetailNavigationOption {
-}
-
-protocol FeedDetailWireframeInterface: WireframeInterface {
-    func navigate(to option: FeedDetailNavigationOption)
-}
+protocol FeedDetailWireframeInterface: WireframeInterface { }
 
 protocol FeedDetailViewInterface: ViewInterface {
+    var feedContent: FeedItemDetailInterface? { get set }
 }
 
 protocol FeedDetailPresenterInterface: PresenterInterface {
+    func didPressPlay()
+    func didPressShare()
+    func didPressBookmark()
+    func didPressUrl()
+    func numberOfSections() -> Int
+    func numberOfItems() -> Int
+    func didSelectItem(at indexPath: IndexPath)
+    func item(at indexPath: IndexPath) -> FeedItemDetailInterface?
+    func loadThumbnail(_ imageView: UIImageView, at indexPath: IndexPath)
 }
 
 protocol FeedDetailInteractorInterface: InteractorInterface {
+    
+}
+
+protocol FeedItemDetailInterface: FeedListItemInterface {
+    var screenTitle: String { get }
+    var authorTitle: String? { get }
+    var author: String? { get }
+    var urlTitle: String? { get }
+    var urlDescription: String? { get }
+    var url: String? { get }
+    var date: String? { get }
 }

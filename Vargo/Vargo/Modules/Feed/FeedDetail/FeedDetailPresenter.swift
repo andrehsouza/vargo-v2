@@ -17,6 +17,8 @@ final class FeedDetailPresenter {
     private unowned var _view: FeedDetailViewInterface
     private var _interactor: FeedDetailInteractorInterface
     private var _wireframe: FeedDetailWireframeInterface
+    
+    private var _feedRelatedVideos: [FeedContent] = []
 
     // MARK: - Lifecycle -
 
@@ -30,4 +32,49 @@ final class FeedDetailPresenter {
 // MARK: - Extensions -
 
 extension FeedDetailPresenter: FeedDetailPresenterInterface {
+    
+    func setFeedDetailFromSplitViewController(_ feedContent: FeedContent) {
+        
+    }
+    
+    func didPressPlay() {
+        
+    }
+    
+    func didPressShare() {
+        
+    }
+    
+    func didPressBookmark() {
+        
+    }
+    
+    func didPressUrl() {
+        
+    }
+    
+    func numberOfSections() -> Int {
+        return 1
+    }
+    
+    func numberOfItems() -> Int {
+        return _feedRelatedVideos.count
+    }
+    
+    func didSelectItem(at indexPath: IndexPath) {
+        
+    }
+    
+    func item(at indexPath: IndexPath) -> FeedItemDetailInterface? {
+        return _feedRelatedVideos[safeIndex: indexPath.item]
+    }
+    
+    func loadThumbnail(_ imageView: UIImageView, at indexPath: IndexPath) {
+//        if let urlString = item?.imageURL, let url = URL(string: urlString) {
+//            collectionImageView.af_setImage(withURL: url, placeholderImage: #imageLiteral(resourceName: "ic_place_holder"))
+//        } else {
+//            collectionImageView.image = #imageLiteral(resourceName: "ic_place_holder")
+//        }
+    }
+    
 }

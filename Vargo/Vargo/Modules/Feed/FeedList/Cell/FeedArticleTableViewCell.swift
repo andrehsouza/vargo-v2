@@ -25,6 +25,11 @@ class FeedArticleTableViewCell: UITableViewCell {
     
     var item: FeedListItemInterface? {
         didSet {
+            if let urlString = item?.imageURL, let url = URL(string: urlString) {
+                thumbnailImageView.af_setImage(withURL: url, placeholderImage: UIImage(named: "ic_place_holder"))
+            } else {
+                thumbnailImageView.image = UIImage(named: "ic_place_holder")
+            }
             playerImageView.isHidden = !(item?.isVideo ?? false)
             titleLabel.text = item?.title
             descriptionLabel.text = item?.description

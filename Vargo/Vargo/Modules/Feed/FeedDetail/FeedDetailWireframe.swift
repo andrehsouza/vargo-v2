@@ -18,8 +18,9 @@ final class FeedDetailWireframe: BaseWireframe {
 
     // MARK: - Module setup -
 
-    init() {
+    init(feedContent: FeedContent? = nil) {
         let moduleViewController = _storyboard.instantiateViewController(ofType: FeedDetailViewController.self)
+        moduleViewController.feedContent = feedContent
         super.init(viewController: moduleViewController)
         
         let interactor = FeedDetailInteractor()
@@ -31,8 +32,4 @@ final class FeedDetailWireframe: BaseWireframe {
 
 // MARK: - Extensions -
 
-extension FeedDetailWireframe: FeedDetailWireframeInterface {
-
-    func navigate(to option: FeedDetailNavigationOption) {
-    }
-}
+extension FeedDetailWireframe: FeedDetailWireframeInterface { }

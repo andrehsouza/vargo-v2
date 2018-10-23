@@ -8,6 +8,15 @@
 
 import UIKit
 
+enum SplitFeedComponents: Int {
+    case list
+    case detail
+    
+    var index: Int {
+        return self.rawValue
+    }
+}
+
 class VSplitViewController: UISplitViewController  {
     
     override func viewDidLoad() {

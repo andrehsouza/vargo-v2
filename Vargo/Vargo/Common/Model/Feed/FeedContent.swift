@@ -76,3 +76,76 @@ extension FeedContent: FeedListItemInterface {
     }
 
 }
+
+// MARK: - FeedItemDetailInterface
+
+extension FeedContent: FeedItemDetailInterface {
+    
+    var screenTitle: String {
+        return isVideo ? "Video" : "Article"
+    }
+    
+    var authorTitle: String? {
+        switch self {
+        case .article(_):
+            return "Author"
+        case .video(_):
+            return nil
+        }
+    }
+    
+    var author: String? {
+        switch self {
+        case .article(let article):
+            return article.author
+        case .video(_):
+            return nil
+        }
+    }
+    
+    var urlTitle: String? {
+        switch self {
+        case .article(_):
+            return "Font"
+        case .video(_):
+            return nil
+        }
+    }
+    
+    var urlDescription: String? {
+        switch self {
+        case .article(let article):
+            if let urlString = article.url, let url = URL(string: urlString) {
+                return url.host
+            } else {
+                return article.url
+            }
+        case .video(_):
+            return nil
+        }
+    }
+    
+    var url: String? {
+        switch self {
+        case .article(let article):
+            return article.url
+        case .video(let video):
+            return video.videoUrl
+        }
+    }
+    
+    var date: String? {
+        switch self {
+        case .article(let article):
+            if let dateString = article.date, let mDate = Date(dateString: dateString) {
+                return "Published on \(mDate.stringFormat())"
+            } else {
+                return nil
+            }
+        case .video(_):
+            return nil
+        }
+        
+    }
+    
+}
