@@ -11,15 +11,35 @@
 import Foundation
 
 final class FeedListInteractor {
+    var presenter: FeedListPresenterInteractorInterface?
     fileprivate let feedService = FeedService()
 }
 
-// MARK: - Extensions -
+// MARK: - FeedListInteractorInterface
 
 extension FeedListInteractor: FeedListInteractorInterface {
+
+    func getFeed(page: Int) {
+        feedService.get(page: page, { [weak self] result in
+            self?._handleFeedResult(result)
+        })
+    }
     
-    func getFeeds(page: Int, completion: @escaping (RequestResultType<Feed>) -> Void) {
-        feedService.get(page, completion)
+}
+
+// MARK: - Extensions
+
+extension FeedListInteractor {
+    
+    private func _handleFeedResult(_ result: RequestResultType<Feed>) {
+        switch result {
+        case .success(let feed):
+            self.presenter?.requestSuccess(feed)
+            break
+        case .failure(let errorResponse):
+            self.presenter?.requestFailed(errorResponse)
+            break
+        }
     }
     
 }

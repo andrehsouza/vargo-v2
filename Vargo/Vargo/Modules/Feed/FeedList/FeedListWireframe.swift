@@ -25,6 +25,7 @@ final class FeedListWireframe: BaseWireframe {
         let interactor = FeedListInteractor()
         let presenter = FeedListPresenter(wireframe: self, view: moduleViewController, interactor: interactor)
         moduleViewController.presenter = presenter
+        interactor.presenter = presenter
     }
 
 }

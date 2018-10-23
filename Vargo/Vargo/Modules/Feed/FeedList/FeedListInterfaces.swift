@@ -23,7 +23,7 @@ protocol FeedListViewInterface: ViewInterface {
     func showFenceLoading(_ loading: Bool)
     func showFooterLoading(_ loading: Bool)
     func showFooterUpdatedMessage(message: String)
-    func showError(error: ErrorInterface, target: Any, action: Selector)
+    func showError(_ error: ErrorInterface, target: Any, action: Selector)
 }
 
 protocol FeedListPresenterInterface: PresenterInterface {
@@ -34,8 +34,14 @@ protocol FeedListPresenterInterface: PresenterInterface {
     func item(at indexPath: IndexPath) -> FeedListItemInterface?
 }
 
+protocol FeedListPresenterInteractorInterface {
+    func requestSuccess(_ feed: Feed)
+    func requestFailed(_ error: ErrorResponse)
+}
+
 protocol FeedListInteractorInterface: InteractorInterface {
-    func getFeeds(page: Int, completion: @escaping (RequestResultType<Feed>) -> Void)
+    var presenter: FeedListPresenterInteractorInterface? { get set }
+    func getFeed(page: Int)
 }
 
 protocol FeedListItemInterface {

@@ -69,12 +69,4 @@ extension FeedDetailPresenter: FeedDetailPresenterInterface {
         return _feedRelatedVideos[safeIndex: indexPath.item]
     }
     
-    func loadThumbnail(_ imageView: UIImageView, at indexPath: IndexPath) {
-//        if let urlString = item?.imageURL, let url = URL(string: urlString) {
-//            collectionImageView.af_setImage(withURL: url, placeholderImage: #imageLiteral(resourceName: "ic_place_holder"))
-//        } else {
-//            collectionImageView.image = #imageLiteral(resourceName: "ic_place_holder")
-//        }
-    }
-    
 }

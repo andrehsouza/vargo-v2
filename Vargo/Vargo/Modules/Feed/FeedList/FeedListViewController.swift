@@ -59,7 +59,7 @@ extension FeedListViewController: FeedListViewInterface {
         footerActivity.isHidden = true
     }
     
-    func showError(error: ErrorInterface, target: Any, action: Selector) {
+    func showError(_ error: ErrorInterface, target: Any, action: Selector) {
         showFenceError(error: error, target: target, action: action)
     }
     

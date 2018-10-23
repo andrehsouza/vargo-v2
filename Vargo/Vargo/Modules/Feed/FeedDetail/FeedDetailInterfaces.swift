@@ -25,7 +25,6 @@ protocol FeedDetailPresenterInterface: PresenterInterface {
     func numberOfItems() -> Int
     func didSelectItem(at indexPath: IndexPath)
     func item(at indexPath: IndexPath) -> FeedItemDetailInterface?
-    func loadThumbnail(_ imageView: UIImageView, at indexPath: IndexPath)
 }
 
 protocol FeedDetailInteractorInterface: InteractorInterface {

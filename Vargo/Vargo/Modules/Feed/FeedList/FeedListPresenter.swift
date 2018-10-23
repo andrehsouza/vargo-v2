@@ -30,7 +30,7 @@ final class FeedListPresenter {
     }
 }
 
-// MARK: - Extensions -
+// MARK: - FeedListPresenterInterface -
 
 extension FeedListPresenter: FeedListPresenterInterface {
     
@@ -65,6 +65,22 @@ extension FeedListPresenter: FeedListPresenterInterface {
     
 }
 
+// MARK: - FeedListPresenterInteractorInterface -
+
+extension FeedListPresenter: FeedListPresenterInteractorInterface {
+    
+    func requestSuccess(_ feed: Feed) {
+        _isLoading = false
+        incrementFeed(feed)
+    }
+    
+    func requestFailed(_ error: ErrorResponse) {
+        _isLoading = false
+        _view.showError(error, target: self, action: #selector(self.retryRequest))
+    }
+    
+}
+
 // MARK: - private funcs
 
 extension FeedListPresenter {
@@ -78,34 +94,26 @@ extension FeedListPresenter {
    private func requestFeedList() {
         if _feed.page < _feed.totalPages {
             _isLoading = true
-            _interactor.getFeeds(page: (_feed.page+1), completion: { [weak self] result in
-                self?._handleFeedResult(result)
-            })
+            _interactor.getFeed(page: (_feed.page+1))
         } else {
             _view.showFooterUpdatedMessage(message: "You're up to date! 🎉")
         }
     }
     
-    private func _handleFeedResult(_ result: RequestResultType<Feed>) {
-        _isLoading = false
-        switch result {
-        case .success(let feed):
-            incrementFeed(feed)
-            _view.showFenceLoading(false)
-            _view.showFooterLoading(true)
-            _view.reloadData()
-            break
-        case .failure(let errorResponse):
-            _view.showError(error: errorResponse, target: self, action: #selector(self.retryRequest))
-            break
-        }
-    }
-    
-    //Necessary to simulate pagination
     private func incrementFeed(_ feed: Feed) {
         _feed.page = feed.page
         _feed.totalPages = feed.totalPages
         _feed.items.append(contentsOf: feed.items)
+        refreshData()
+    }
+    
+    private func refreshData() {
+        _view.showFenceLoading(false)
+        _view.showFooterLoading(true)
+        _view.reloadData()
     }
     
 }
+
+
+

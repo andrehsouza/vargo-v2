@@ -13,7 +13,7 @@ class FeedService: NSObject {
     
     typealias Model = Feed
     
-    func get(_ page: Int, _ completion: @escaping (RequestResultType<Model>) -> Void) {
+    func get(page: Int, _ completion: @escaping (RequestResultType<Model>) -> Void) {
         let url = VUrl.path(for: .feed(page: page))
         let service = APIService(with: url)
         service.getData(completion)
