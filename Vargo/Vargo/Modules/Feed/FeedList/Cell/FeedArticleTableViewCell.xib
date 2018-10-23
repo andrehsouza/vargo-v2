@@ -19,10 +19,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkO-TR-yBK" customClass="VCardView" customModule="Vargo" customModuleProvider="target">
-                        <rect key="frame" x="8" y="0.0" width="342" height="171.5"/>
+                        <rect key="frame" x="8" y="8" width="342" height="163.5"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_place_holder" translatesAutoresizingMaskIntoConstraints="NO" id="Th6-7p-Dhh" customClass="VImageView" customModule="Vargo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="342" height="171.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="342" height="163.5"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="6"/>
@@ -31,14 +31,14 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_player" translatesAutoresizingMaskIntoConstraints="NO" id="5Ai-fb-iYL">
-                                <rect key="frame" x="126" y="16" width="90" height="90"/>
+                                <rect key="frame" x="126" y="12" width="90" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="AkL-Bw-eqq"/>
                                     <constraint firstAttribute="height" constant="90" id="ZNf-q0-HXr"/>
                                 </constraints>
                             </imageView>
                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d5o-5Z-ZrP" customClass="VCardView" customModule="Vargo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="119" width="342" height="52.5"/>
+                                <rect key="frame" x="0.0" y="111" width="342" height="52.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="tUO-Vm-qfd">
                                         <rect key="frame" x="10" y="10" width="322" height="32.5"/>
@@ -76,10 +76,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUY-fP-qWS" customClass="VCardView" customModule="Vargo" customModuleProvider="target">
-                                <rect key="frame" x="306" y="15" width="21" height="22"/>
+                                <rect key="frame" x="276" y="15" width="51" height="51"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxy-B1-cpF">
-                                        <rect key="frame" x="0.0" y="0.0" width="21" height="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="51"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="ic_book_mark">
                                             <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -129,7 +129,7 @@
                                 <real key="value" value="6"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="layerBackgroundColor">
-                                <color key="value" red="0.91305857899999998" green="0.93324893710000001" blue="0.94568949940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                 <real key="value" value="1"/>
@@ -140,14 +140,15 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
-                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="hkO-TR-yBK" secondAttribute="trailing" constant="8" id="4oR-5U-zoX"/>
-                    <constraint firstItem="hkO-TR-yBK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="eyR-zH-gUa"/>
+                    <constraint firstItem="hkO-TR-yBK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="eyR-zH-gUa"/>
                     <constraint firstAttribute="bottom" secondItem="hkO-TR-yBK" secondAttribute="bottom" constant="8" id="pKR-t8-7K8"/>
                     <constraint firstItem="hkO-TR-yBK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="qGr-yV-Emn"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="bookMarkButton" destination="kxy-B1-cpF" id="Sfr-nG-Sfx"/>
@@ -160,9 +161,9 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="ic_book_mark" width="21" height="21"/>
-        <image name="ic_book_mark_selected" width="21" height="21"/>
-        <image name="ic_place_holder" width="750" height="750"/>
-        <image name="ic_player" width="128" height="128"/>
+        <image name="ic_book_mark" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="ic_book_mark_selected" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="ic_place_holder" width="1500" height="1500"/>
+        <image name="ic_player" width="102.40000152587891" height="102.40000152587891"/>
     </resources>
 </document>

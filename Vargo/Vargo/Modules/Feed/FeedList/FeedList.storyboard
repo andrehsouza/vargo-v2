@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VMl-Oz-Llt">
-                                <rect key="frame" x="0.0" y="30" width="375" height="637"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="zDn-aJ-ib0">
                                     <rect key="frame" x="0.0" y="72" width="375" height="44"/>
@@ -64,13 +64,16 @@
                             <constraint firstItem="byQ-XU-IE8" firstAttribute="bottom" secondItem="VMl-Oz-Llt" secondAttribute="bottom" id="2Ez-Pr-Wzg"/>
                             <constraint firstItem="byQ-XU-IE8" firstAttribute="trailing" secondItem="VMl-Oz-Llt" secondAttribute="trailing" id="HD1-hS-k1p"/>
                             <constraint firstItem="VMl-Oz-Llt" firstAttribute="leading" secondItem="byQ-XU-IE8" secondAttribute="leading" id="b0u-rW-AHa"/>
-                            <constraint firstItem="VMl-Oz-Llt" firstAttribute="top" secondItem="byQ-XU-IE8" secondAttribute="top" constant="10" id="kYf-EO-aQ6"/>
+                            <constraint firstItem="VMl-Oz-Llt" firstAttribute="top" secondItem="byQ-XU-IE8" secondAttribute="top" id="kYf-EO-aQ6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="byQ-XU-IE8"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="p6f-cS-c41"/>
                     <connections>
+                        <outlet property="footerActivity" destination="6yN-3Z-3e1" id="KAv-t1-edz"/>
+                        <outlet property="footerLabel" destination="md8-4e-3qW" id="UJT-4N-sVP"/>
                         <outlet property="tableView" destination="VMl-Oz-Llt" id="qRf-08-8i2"/>
+                        <outlet property="tableViewFooter" destination="zDn-aJ-ib0" id="UD5-Cj-sUw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lNl-Xw-pGu" userLabel="First Responder" sceneMemberID="firstResponder"/>

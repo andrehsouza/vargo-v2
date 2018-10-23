@@ -1,5 +1,5 @@
 //
-//  Vbutton.swift
+//  VButton.swift
 //  Vargo
 //
 //  Created by Andre Souza on 22/10/2018.
@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class Vbutton: UIButton {
+class VButton: UIButton {
 
     @IBInspectable var fillColor: UIColor = UIColor.white {
         didSet {
@@ -65,7 +65,7 @@ class Vbutton: UIButton {
 
 }
 
-extension Vbutton {
+extension VButton {
     
     override func layoutSubviews() {
         layer.shadowPath = UIBezierPath(rect: bounds).cgPath

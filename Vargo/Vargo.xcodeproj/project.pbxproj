@@ -38,7 +38,7 @@
 		7BCA39AC217E357D00F7AAB4 /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39A6217E357D00F7AAB4 /* FeedDetailViewController.swift */; };
 		7BCA39AD217E357D00F7AAB4 /* FeedDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39A7217E357D00F7AAB4 /* FeedDetailInteractor.swift */; };
 		7BCA39AE217E357D00F7AAB4 /* FeedDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39A8217E357D00F7AAB4 /* FeedDetailWireframe.swift */; };
-		7BCA39B9217E3B8100F7AAB4 /* Vbutton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39B8217E3B8100F7AAB4 /* Vbutton.swift */; };
+		7BCA39B9217E3B8100F7AAB4 /* VButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39B8217E3B8100F7AAB4 /* VButton.swift */; };
 		7BCA39BB217E3B9700F7AAB4 /* VCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39BA217E3B9700F7AAB4 /* VCardView.swift */; };
 		7BCA39BD217E442B00F7AAB4 /* VImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39BC217E442B00F7AAB4 /* VImageView.swift */; };
 		7BCA39BF217E459D00F7AAB4 /* VSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39BE217E459D00F7AAB4 /* VSplitViewController.swift */; };
@@ -58,6 +58,13 @@
 		7BCA39E7217E639300F7AAB4 /* RelatedVideoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39E5217E639300F7AAB4 /* RelatedVideoService.swift */; };
 		7BCA39E8217E639300F7AAB4 /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39E6217E639300F7AAB4 /* FeedService.swift */; };
 		7BCA39EA217E6F2000F7AAB4 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39E9217E6F2000F7AAB4 /* Array+Extension.swift */; };
+		7BF528D8217EB47E002F1189 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF528D6217EB47D002F1189 /* UITableView+Extension.swift */; };
+		7BF528D9217EB47E002F1189 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF528D7217EB47E002F1189 /* UITableViewCell+Extension.swift */; };
+		7BF528DB217EB4BB002F1189 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF528DA217EB4BB002F1189 /* ReusableViewProtocol.swift */; };
+		7BF528E0217EB95A002F1189 /* FenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF528DE217EB95A002F1189 /* FenceView.swift */; };
+		7BF528E1217EB95A002F1189 /* FenceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BF528DF217EB95A002F1189 /* FenceView.xib */; };
+		7BF528E5217EBC41002F1189 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF528E4217EBC41002F1189 /* BaseViewController.swift */; };
+		7BF528E7217EBC7B002F1189 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF528E6217EBC7A002F1189 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,7 +125,7 @@
 		7BCA39A6217E357D00F7AAB4 /* FeedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewController.swift; sourceTree = "<group>"; };
 		7BCA39A7217E357D00F7AAB4 /* FeedDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailInteractor.swift; sourceTree = "<group>"; };
 		7BCA39A8217E357D00F7AAB4 /* FeedDetailWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailWireframe.swift; sourceTree = "<group>"; };
-		7BCA39B8217E3B8100F7AAB4 /* Vbutton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vbutton.swift; sourceTree = "<group>"; };
+		7BCA39B8217E3B8100F7AAB4 /* VButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VButton.swift; sourceTree = "<group>"; };
 		7BCA39BA217E3B9700F7AAB4 /* VCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCardView.swift; sourceTree = "<group>"; };
 		7BCA39BC217E442B00F7AAB4 /* VImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VImageView.swift; sourceTree = "<group>"; };
 		7BCA39BE217E459D00F7AAB4 /* VSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSplitViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +145,13 @@
 		7BCA39E5217E639300F7AAB4 /* RelatedVideoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelatedVideoService.swift; sourceTree = "<group>"; };
 		7BCA39E6217E639300F7AAB4 /* FeedService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedService.swift; sourceTree = "<group>"; };
 		7BCA39E9217E6F2000F7AAB4 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		7BF528D6217EB47D002F1189 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		7BF528D7217EB47E002F1189 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		7BF528DA217EB4BB002F1189 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
+		7BF528DE217EB95A002F1189 /* FenceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FenceView.swift; sourceTree = "<group>"; };
+		7BF528DF217EB95A002F1189 /* FenceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FenceView.xib; sourceTree = "<group>"; };
+		7BF528E4217EBC41002F1189 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		7BF528E6217EBC7A002F1189 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		7C2E46C5026B48AAF82DE568 /* Pods_VargoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VargoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1ACF890D34B43AA862550A /* Pods-VargoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VargoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VargoUITests/Pods-VargoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D14C212E14FD580FC72C07CB /* Pods_Vargo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vargo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -249,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				7BCA396D217E106500F7AAB4 /* VIPER */,
+				7BF528E2217EBC0E002F1189 /* Base */,
 				7BCA3985217E151F00F7AAB4 /* Extensions */,
 				7BCA39E0217E624B00F7AAB4 /* Constants */,
 				7BCA396E217E107300F7AAB4 /* Util */,
@@ -342,12 +357,16 @@
 		7BCA3985217E151F00F7AAB4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				7BF528DC217EB4E3002F1189 /* ReusableViewProtocol */,
 				7BCA398F217E2BDF00F7AAB4 /* NSObject+Extension.swift */,
 				7BCA3986217E154B00F7AAB4 /* UINavigationController+Extension.swift */,
 				7BCA398D217E2B4900F7AAB4 /* UIColor+Extension.swift */,
 				7BCA3996217E334D00F7AAB4 /* UIStoryboard+Extension.swift */,
 				7BCA39C0217E46E400F7AAB4 /* UIFont+Extension.swift */,
 				7BCA39E9217E6F2000F7AAB4 /* Array+Extension.swift */,
+				7BF528D6217EB47D002F1189 /* UITableView+Extension.swift */,
+				7BF528D7217EB47E002F1189 /* UITableViewCell+Extension.swift */,
+				7BF528E6217EBC7A002F1189 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -409,7 +428,8 @@
 		7BCA39AF217E391A00F7AAB4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7BCA39B8217E3B8100F7AAB4 /* Vbutton.swift */,
+				7BF528DD217EB925002F1189 /* FenceView */,
+				7BCA39B8217E3B8100F7AAB4 /* VButton.swift */,
 				7BCA39BA217E3B9700F7AAB4 /* VCardView.swift */,
 				7BCA39BC217E442B00F7AAB4 /* VImageView.swift */,
 				7BCA39BE217E459D00F7AAB4 /* VSplitViewController.swift */,
@@ -444,6 +464,39 @@
 				7BCA39DC217E606200F7AAB4 /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		7BF528DC217EB4E3002F1189 /* ReusableViewProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				7BF528DA217EB4BB002F1189 /* ReusableViewProtocol.swift */,
+			);
+			path = ReusableViewProtocol;
+			sourceTree = "<group>";
+		};
+		7BF528DD217EB925002F1189 /* FenceView */ = {
+			isa = PBXGroup;
+			children = (
+				7BF528DE217EB95A002F1189 /* FenceView.swift */,
+				7BF528DF217EB95A002F1189 /* FenceView.xib */,
+			);
+			path = FenceView;
+			sourceTree = "<group>";
+		};
+		7BF528E2217EBC0E002F1189 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				7BF528E3217EBC23002F1189 /* BaseViewController */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		7BF528E3217EBC23002F1189 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7BF528E4217EBC41002F1189 /* BaseViewController.swift */,
+			);
+			path = BaseViewController;
 			sourceTree = "<group>";
 		};
 		9CECD17FAF3CCEC7B7BD0782 /* Frameworks */ = {
@@ -566,6 +619,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BF528E1217EB95A002F1189 /* FenceView.xib in Resources */,
 				7BCA397B217E130600F7AAB4 /* LaunchScreen.storyboard in Resources */,
 				7BCA3975217E12DB00F7AAB4 /* Assets.xcassets in Resources */,
 				7BCA39C4217E56E700F7AAB4 /* FeedArticleTableViewCell.xib in Resources */,
@@ -721,13 +775,19 @@
 			files = (
 				7BCA39DF217E623B00F7AAB4 /* VUrl.swift in Sources */,
 				7BCA39BF217E459D00F7AAB4 /* VSplitViewController.swift in Sources */,
+				7BF528D8217EB47E002F1189 /* UITableView+Extension.swift in Sources */,
 				7BCA3983217E13A200F7AAB4 /* InteractorInterface.swift in Sources */,
 				7BCA3997217E334D00F7AAB4 /* UIStoryboard+Extension.swift in Sources */,
-				7BCA39B9217E3B8100F7AAB4 /* Vbutton.swift in Sources */,
+				7BF528E5217EBC41002F1189 /* BaseViewController.swift in Sources */,
+				7BCA39B9217E3B8100F7AAB4 /* VButton.swift in Sources */,
 				7BCA398B217E2AEA00F7AAB4 /* ThemeInitializer.swift in Sources */,
+				7BF528D9217EB47E002F1189 /* UITableViewCell+Extension.swift in Sources */,
 				7BCA3984217E13A200F7AAB4 /* BaseWireframe.swift in Sources */,
+				7BF528E7217EBC7B002F1189 /* UIView+Extension.swift in Sources */,
 				7BCA39AA217E357D00F7AAB4 /* FeedDetailInterfaces.swift in Sources */,
+				7BF528E0217EB95A002F1189 /* FenceView.swift in Sources */,
 				7BCA39AB217E357D00F7AAB4 /* FeedDetailPresenter.swift in Sources */,
+				7BF528DB217EB4BB002F1189 /* ReusableViewProtocol.swift in Sources */,
 				7BCA39BD217E442B00F7AAB4 /* VImageView.swift in Sources */,
 				7BCA39A1217E351D00F7AAB4 /* FeedListWireframe.swift in Sources */,
 				7BCA39E4217E637800F7AAB4 /* ErrorResponse.swift in Sources */,

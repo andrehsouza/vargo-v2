@@ -34,9 +34,9 @@ final class FeedListPresenter {
 
 extension FeedListPresenter: FeedListPresenterInterface {
     
-    func loadItems() {
+    func viewDidLoad() {
         _view.showFooterLoading(true)
-        _view.showLoading(false)
+        _view.showFenceLoading(false)
         requestFeedList()
     }
     
@@ -48,12 +48,23 @@ extension FeedListPresenter: FeedListPresenterInterface {
         return _feed.items.count
     }
     
+    func heightForRow() -> CGFloat {
+        return 185
+    }
+    
     func didSelectItem(at indexPath: IndexPath) {
         //TODO
     }
     
     func item(at indexPath: IndexPath) -> FeedListItemInterface? {
         return _feed.items[safeIndex: indexPath.row]
+    }
+    
+    func willDisplayCell(at indexPath: IndexPath) {
+        let lastElement = numberOfItems() - 1
+        if !_isLoading && indexPath.row == lastElement {
+            requestFeedList()
+        }
     }
     
     func loadThumbnail(_ imageView: UIImageView, at indexPath: IndexPath) {
@@ -73,18 +84,16 @@ extension FeedListPresenter {
     
     @objc private func retryRequest() {
         _view.showFooterLoading(false)
-        _view.showLoading(true)
+        _view.showFenceLoading(true)
         requestFeedList()
     }
     
    private func requestFeedList() {
         if _feed.page < _feed.totalPages {
-            if !_isLoading {
-                _isLoading = true
-                _interactor.getFeeds(page: (_feed.page+1), completion: { [weak self] result in
-                    self?._handleFeedResult(result)
-                })
-            }
+            _isLoading = true
+            _interactor.getFeeds(page: (_feed.page+1), completion: { [weak self] result in
+                self?._handleFeedResult(result)
+            })
         } else {
             _view.showFooterUpdatedMessage(message: "You're up to date! 🎉")
         }
@@ -95,7 +104,7 @@ extension FeedListPresenter {
         switch result {
         case .success(let feed):
             incrementFeed(feed)
-            _view.showLoading(false)
+            _view.showFenceLoading(false)
             _view.showFooterLoading(true)
             _view.reloadData()
             break

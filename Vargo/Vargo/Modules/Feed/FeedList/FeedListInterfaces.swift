@@ -20,16 +20,17 @@ protocol FeedListWireframeInterface: WireframeInterface {
 
 protocol FeedListViewInterface: ViewInterface {
     func reloadData()
-    func showLoading(_ loading: Bool)
+    func showFenceLoading(_ loading: Bool)
     func showFooterLoading(_ loading: Bool)
     func showFooterUpdatedMessage(message: String)
     func showError(error: ErrorInterface, target: Any, action: Selector)
 }
 
 protocol FeedListPresenterInterface: PresenterInterface {
-    func loadItems()
     func numberOfSections() -> Int
     func numberOfItems() -> Int
+    func heightForRow() -> CGFloat
+    func willDisplayCell(at indexPath: IndexPath)
     func didSelectItem(at indexPath: IndexPath)
     func item(at indexPath: IndexPath) -> FeedListItemInterface?
     func loadThumbnail(_ imageView: UIImageView, at indexPath: IndexPath)
