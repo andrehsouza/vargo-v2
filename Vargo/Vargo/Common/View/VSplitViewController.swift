@@ -9,6 +9,7 @@
 import UIKit
 
 enum SplitFeedComponents: Int {
+    
     case list
     case detail
     
@@ -30,7 +31,7 @@ class VSplitViewController: UISplitViewController  {
 
 extension VSplitViewController: UISplitViewControllerDelegate {
     
-    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController:UIViewController, onto primaryViewController:UIViewController) -> Bool {
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
         return true
     }
     

@@ -87,7 +87,7 @@ extension BaseWireframe: WireframeInterface {
     
     func showSimpleAlert(message: String) {
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        showAlert(with: "Something went wrong", message: message, actions: [okAction])
+        showAlert(with: message, message: message, actions: [okAction])
     }
     
 }

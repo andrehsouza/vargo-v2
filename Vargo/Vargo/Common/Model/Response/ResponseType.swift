@@ -33,7 +33,7 @@ extension ResponseType {
             return "Please, check your internet connection."
         case .UNDEFINED: fallthrough
         default:
-            return "An unexpected error has occurred, please try again in a moment."
+            return "An unexpected error has occurred, please try again."
         }
     }
     

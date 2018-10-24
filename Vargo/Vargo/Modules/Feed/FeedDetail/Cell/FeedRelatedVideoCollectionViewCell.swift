@@ -18,12 +18,13 @@ class FeedRelatedVideoCollectionViewCell: UICollectionViewCell {
     
     var item: FeedListItemInterface? {
         didSet {
-            if let urlString = item?.imageURL, let url = URL(string: urlString) {
+            guard let item = item else { return }
+            if let urlString = item.imageURL, let url = URL(string: urlString) {
                 collectionImageView.af_setImage(withURL: url, placeholderImage: UIImage(named: "ic_place_holder"))
             } else {
                 collectionImageView.image = UIImage(named: "ic_place_holder")
             }
-            collectionTitleLabel.text = item?.title
+            collectionTitleLabel.text = item.title
         }
     }
 

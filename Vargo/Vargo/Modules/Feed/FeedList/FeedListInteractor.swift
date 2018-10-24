@@ -11,14 +11,15 @@
 import Foundation
 
 final class FeedListInteractor {
-    typealias Entity = Feed
     var presenter: FeedListPresenterInteractorInterface?
 }
 
 // MARK: - FeedListInteractorInterface
 
 extension FeedListInteractor: FeedListInteractorInterface {
-
+    
+    typealias Entity = Feed
+    
     func getFeed(page: Int) {
         let url = VUrl.path(for: .feed(page: page))
         let service = APIService(with: url)

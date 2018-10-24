@@ -15,6 +15,7 @@
 		7B65248A217F6C240033742D /* FeedRelatedVideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B652488217F6C240033742D /* FeedRelatedVideoCollectionViewCell.swift */; };
 		7B65248C217F6CA50033742D /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65248B217F6CA50033742D /* UICollectionViewCell+Extension.swift */; };
 		7B65248E217F6CC50033742D /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65248D217F6CC50033742D /* UICollectionView+Extension.swift */; };
+		7B65B0D12180A7B0002A98FE /* VButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65B0D02180A7B0002A98FE /* VButton.swift */; };
 		7BCA393E217E103900F7AAB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA393D217E103900F7AAB4 /* AppDelegate.swift */; };
 		7BCA3953217E103A00F7AAB4 /* VargoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA3952217E103A00F7AAB4 /* VargoTests.swift */; };
 		7BCA395E217E103A00F7AAB4 /* VargoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA395D217E103A00F7AAB4 /* VargoUITests.swift */; };
@@ -43,7 +44,6 @@
 		7BCA39AC217E357D00F7AAB4 /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39A6217E357D00F7AAB4 /* FeedDetailViewController.swift */; };
 		7BCA39AD217E357D00F7AAB4 /* FeedDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39A7217E357D00F7AAB4 /* FeedDetailInteractor.swift */; };
 		7BCA39AE217E357D00F7AAB4 /* FeedDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39A8217E357D00F7AAB4 /* FeedDetailWireframe.swift */; };
-		7BCA39B9217E3B8100F7AAB4 /* VButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39B8217E3B8100F7AAB4 /* VButton.swift */; };
 		7BCA39BB217E3B9700F7AAB4 /* VCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39BA217E3B9700F7AAB4 /* VCardView.swift */; };
 		7BCA39BD217E442B00F7AAB4 /* VImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39BC217E442B00F7AAB4 /* VImageView.swift */; };
 		7BCA39BF217E459D00F7AAB4 /* VSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39BE217E459D00F7AAB4 /* VSplitViewController.swift */; };
@@ -99,6 +99,7 @@
 		7B652488217F6C240033742D /* FeedRelatedVideoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedRelatedVideoCollectionViewCell.swift; sourceTree = "<group>"; };
 		7B65248B217F6CA50033742D /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
 		7B65248D217F6CC50033742D /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		7B65B0D02180A7B0002A98FE /* VButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VButton.swift; sourceTree = "<group>"; };
 		7BCA393A217E103900F7AAB4 /* Vargo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vargo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCA393D217E103900F7AAB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BCA3949217E103A00F7AAB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -133,7 +134,6 @@
 		7BCA39A6217E357D00F7AAB4 /* FeedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewController.swift; sourceTree = "<group>"; };
 		7BCA39A7217E357D00F7AAB4 /* FeedDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailInteractor.swift; sourceTree = "<group>"; };
 		7BCA39A8217E357D00F7AAB4 /* FeedDetailWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailWireframe.swift; sourceTree = "<group>"; };
-		7BCA39B8217E3B8100F7AAB4 /* VButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VButton.swift; sourceTree = "<group>"; };
 		7BCA39BA217E3B9700F7AAB4 /* VCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCardView.swift; sourceTree = "<group>"; };
 		7BCA39BC217E442B00F7AAB4 /* VImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VImageView.swift; sourceTree = "<group>"; };
 		7BCA39BE217E459D00F7AAB4 /* VSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSplitViewController.swift; sourceTree = "<group>"; };
@@ -446,8 +446,8 @@
 			isa = PBXGroup;
 			children = (
 				7BF528DD217EB925002F1189 /* FenceView */,
-				7BCA39B8217E3B8100F7AAB4 /* VButton.swift */,
 				7BCA39BA217E3B9700F7AAB4 /* VCardView.swift */,
+				7B65B0D02180A7B0002A98FE /* VButton.swift */,
 				7BCA39BC217E442B00F7AAB4 /* VImageView.swift */,
 				7BCA39BE217E459D00F7AAB4 /* VSplitViewController.swift */,
 			);
@@ -794,11 +794,11 @@
 				7BCA39DF217E623B00F7AAB4 /* VUrl.swift in Sources */,
 				7BCA39BF217E459D00F7AAB4 /* VSplitViewController.swift in Sources */,
 				7B65248C217F6CA50033742D /* UICollectionViewCell+Extension.swift in Sources */,
+				7B65B0D12180A7B0002A98FE /* VButton.swift in Sources */,
 				7BF528D8217EB47E002F1189 /* UITableView+Extension.swift in Sources */,
 				7BCA3983217E13A200F7AAB4 /* InteractorInterface.swift in Sources */,
 				7BCA3997217E334D00F7AAB4 /* UIStoryboard+Extension.swift in Sources */,
 				7BF528E5217EBC41002F1189 /* BaseViewController.swift in Sources */,
-				7BCA39B9217E3B8100F7AAB4 /* VButton.swift in Sources */,
 				7BCA398B217E2AEA00F7AAB4 /* ThemeInitializer.swift in Sources */,
 				7BF528D9217EB47E002F1189 /* UITableViewCell+Extension.swift in Sources */,
 				7BCA3984217E13A200F7AAB4 /* BaseWireframe.swift in Sources */,

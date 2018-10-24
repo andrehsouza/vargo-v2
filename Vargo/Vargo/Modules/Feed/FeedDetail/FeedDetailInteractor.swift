@@ -11,13 +11,14 @@
 import Foundation
 
 final class FeedDetailInteractor {
-    typealias Entity = [FeedContent]
     var presenter: FeedDetailPresenterInteractorInterface?
 }
 
 // MARK: - Extensions -
 
 extension FeedDetailInteractor: FeedDetailInteractorInterface {
+    
+    typealias Entity = [FeedContent]
     
     func getRelatedVideos(page: Int) {
         let url = VUrl.path(for: .relatedVideos(page: page))

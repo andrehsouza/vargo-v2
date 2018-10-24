@@ -12,9 +12,6 @@
         <array key="SFCompactText-Regular.otf">
             <string>SFCompactText-Regular</string>
         </array>
-        <array key="SFCompactText-Semibold.otf">
-            <string>SFCompactText-Semibold</string>
-        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -61,35 +58,16 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Xf-zG-XNa">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGQ-m6-bQL" customClass="VButton" customModule="Vargo" customModuleProvider="target">
-                            <rect key="frame" x="62.5" y="363.5" width="250" height="60"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="250" id="IH6-nO-gCT"/>
-                                <constraint firstAttribute="height" constant="60" id="a6h-QN-8Hh"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="SFCompactText-Semibold" family="SF Compact Text" pointSize="16"/>
-                            <state key="normal" title="Tentar novamente">
-                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </state>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                    <color key="value" red="0.74117647058823533" green="0.88627450980392153" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="10"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                            <connections>
-                                <action selector="touchRetry:" destination="iN0-l3-epB" eventType="touchUpInside" id="hBT-Hc-jSw"/>
-                            </connections>
-                        </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ocorreu um erro, tente novamente" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxt-AG-Efp">
-                            <rect key="frame" x="40" y="302.5" width="295" height="21"/>
+                            <rect key="frame" x="40" y="293.5" width="295" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="elY-ld-7M5"/>
+                            </constraints>
                             <fontDescription key="fontDescription" name="SFCompactText-Regular" family="SF Compact Text" pointSize="18"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_alert" translatesAutoresizingMaskIntoConstraints="NO" id="QF7-Sd-WsQ" customClass="VImageView" customModule="Vargo" customModuleProvider="target">
-                            <rect key="frame" x="162.5" y="227.5" width="50" height="50"/>
+                            <rect key="frame" x="162.5" y="218.5" width="50" height="50"/>
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="50" id="bim-3E-mCO"/>
@@ -99,16 +77,37 @@
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isRenderingMode" value="YES"/>
                             </userDefinedRuntimeAttributes>
                         </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mI8-Ny-iUY" customClass="VButton" customModule="Vargo" customModuleProvider="target">
+                            <rect key="frame" x="50" y="355.5" width="275" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="oRY-e2-Hrx"/>
+                            </constraints>
+                            <state key="normal" title="Try again">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="layerBackgroundColor">
+                                    <color key="value" red="0.83529411760000005" green="0.92941176469999998" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="touchRetry:" destination="iN0-l3-epB" eventType="touchUpInside" id="lOS-Uy-ULX"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="JL2-bR-fbs" firstAttribute="trailing" secondItem="mI8-Ny-iUY" secondAttribute="trailing" constant="50" id="3q1-8u-9Ia"/>
                         <constraint firstItem="Nxt-AG-Efp" firstAttribute="top" secondItem="QF7-Sd-WsQ" secondAttribute="bottom" constant="25" id="OHG-a2-U6n"/>
                         <constraint firstItem="JL2-bR-fbs" firstAttribute="trailing" secondItem="Nxt-AG-Efp" secondAttribute="trailing" constant="40" id="OSR-lN-P6R"/>
-                        <constraint firstItem="kGQ-m6-bQL" firstAttribute="centerY" secondItem="JL2-bR-fbs" secondAttribute="centerY" constant="50" id="OoE-6U-gyO"/>
                         <constraint firstItem="Nxt-AG-Efp" firstAttribute="leading" secondItem="JL2-bR-fbs" secondAttribute="leading" constant="40" id="RII-Gi-246"/>
-                        <constraint firstItem="kGQ-m6-bQL" firstAttribute="centerX" secondItem="JL2-bR-fbs" secondAttribute="centerX" id="jaV-26-SSq"/>
-                        <constraint firstItem="kGQ-m6-bQL" firstAttribute="top" secondItem="Nxt-AG-Efp" secondAttribute="bottom" constant="40" id="oEx-zc-3eI"/>
+                        <constraint firstItem="mI8-Ny-iUY" firstAttribute="leading" secondItem="JL2-bR-fbs" secondAttribute="leading" constant="50" id="aC5-Vu-Kxw"/>
+                        <constraint firstItem="mI8-Ny-iUY" firstAttribute="top" secondItem="Nxt-AG-Efp" secondAttribute="bottom" constant="40" id="dtL-yU-GZH"/>
                         <constraint firstItem="QF7-Sd-WsQ" firstAttribute="centerX" secondItem="JL2-bR-fbs" secondAttribute="centerX" id="xYz-xe-ICZ"/>
+                        <constraint firstItem="QF7-Sd-WsQ" firstAttribute="centerY" secondItem="JL2-bR-fbs" secondAttribute="centerY" constant="-100" id="zG4-ra-KBp"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="JL2-bR-fbs"/>
                 </view>
@@ -124,15 +123,15 @@
             </constraints>
             <connections>
                 <outlet property="activityIndicator" destination="qDK-ef-bzg" id="sjY-db-rFg"/>
-                <outlet property="btRetry" destination="kGQ-m6-bQL" id="trY-ys-wcx"/>
+                <outlet property="btRetry" destination="mI8-Ny-iUY" id="Nhe-CX-pAc"/>
                 <outlet property="errorView" destination="4Xf-zG-XNa" id="mtu-WI-lzE"/>
                 <outlet property="loadingView" destination="0h6-7R-IyP" id="9Qa-jA-8kz"/>
                 <outlet property="messageLbl" destination="Nxt-AG-Efp" id="Aqw-Py-dcx"/>
             </connections>
-            <point key="canvasLocation" x="34.5" y="90.5"/>
+            <point key="canvasLocation" x="34.399999999999999" y="90.404797601199405"/>
         </view>
     </objects>
     <resources>
-        <image name="ic_alert" width="102.40000152587891" height="102.40000152587891"/>
+        <image name="ic_alert" width="64" height="64"/>
     </resources>
 </document>

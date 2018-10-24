@@ -14,7 +14,7 @@ class VImageView: UIImageView {
     @IBInspectable var isRenderingMode: Bool = false {
         didSet{
             if let image = self.image {
-                let rederingMode = isRenderingMode ? UIImage.RenderingMode.alwaysTemplate : UIImage.RenderingMode.alwaysOriginal
+                let rederingMode: UIImage.RenderingMode = isRenderingMode ? .alwaysTemplate : .alwaysOriginal
                 self.image = image.withRenderingMode(rederingMode)
             }
         }
