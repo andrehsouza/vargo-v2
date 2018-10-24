@@ -41,6 +41,8 @@ extension ErrorResponse {
             return "Invalid data."
         case .decodeError:
             return "Decode error."
+        case .notFound:
+            return "The URL requested was not found."
         case .unauthorized:
             return "You don't have permission to access."
         case .serverError:

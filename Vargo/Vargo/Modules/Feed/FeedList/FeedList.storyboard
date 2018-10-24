@@ -68,7 +68,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="byQ-XU-IE8"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="p6f-cS-c41"/>
+                    <navigationItem key="navigationItem" title="Vargo" id="p6f-cS-c41"/>
                     <connections>
                         <outlet property="footerActivity" destination="6yN-3Z-3e1" id="KAv-t1-edz"/>
                         <outlet property="footerLabel" destination="md8-4e-3qW" id="UJT-4N-sVP"/>

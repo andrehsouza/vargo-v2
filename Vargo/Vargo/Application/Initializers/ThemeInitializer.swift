@@ -26,7 +26,6 @@ extension ThemeInitializer {
         UINavigationBar.appearance().prefersLargeTitles = false
         let titleArr: [NSAttributedString.Key : Any] = [.foregroundColor: UIColor.black, .font: UIFont(type: .regular, size: 25)]
         UINavigationBar.appearance().titleTextAttributes = titleArr
-        UINavigationBar.appearance().largeTitleTextAttributes = titleArr
     }
     
     private func tableViewAppearence() {

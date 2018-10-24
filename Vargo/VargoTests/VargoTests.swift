@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import Alamofire
 @testable import Vargo
 
 class VargoTests: XCTestCase {
@@ -19,15 +20,27 @@ class VargoTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testFeedRequest() {
+        let url = VUrl.path(for: .feed(page: 1))
+        let config = URLSessionConfiguration.default
+        config.timeoutIntervalForRequest = 30
+        config.timeoutIntervalForResource = 30
+        let alamoFireManager = Alamofire.SessionManager(configuration: config)
+        
+        alamoFireManager.request(url, method: .get, encoding: JSONEncoding.default).validate(statusCode: 200..<300).responseJSON { response in
+            XCTAssert((response.data == nil) || (response.result.value is Feed))
+        }
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testRelatedVideosRequest() {
+        let url = VUrl.path(for: .relatedVideos(page: 1))
+        let config = URLSessionConfiguration.default
+        config.timeoutIntervalForRequest = 30
+        config.timeoutIntervalForResource = 30
+        let alamoFireManager = Alamofire.SessionManager(configuration: config)
+        
+        alamoFireManager.request(url, method: .get, encoding: JSONEncoding.default).validate(statusCode: 200..<300).responseJSON { response in
+            XCTAssert((response.data == nil) || (response.result.value is Feed))
         }
     }
 
