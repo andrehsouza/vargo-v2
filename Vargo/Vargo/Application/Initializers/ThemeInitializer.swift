@@ -32,7 +32,7 @@ extension ThemeInitializer {
     private func tableViewAppearence() {
         let colorView = UIView()
         colorView.alpha = 0.20
-        colorView.backgroundColor = UIColor.gray.withAlphaComponent(0.20)
+        colorView.backgroundColor = UIColor.gray.withAlphaComponent(0.30)
         UITableViewCell.appearance().selectedBackgroundView = colorView
     }
     

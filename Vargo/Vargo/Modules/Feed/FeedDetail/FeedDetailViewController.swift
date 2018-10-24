@@ -56,6 +56,7 @@ final class FeedDetailViewController: UIViewController {
         }
     }
     
+    @IBOutlet private weak var feedRelatedVideosLoadingView: UIView!
     @IBOutlet private weak var feedRelatedVideosLoadingLabel: UILabel!
     @IBOutlet private weak var feedRelatedVideosLoadingRetryButton: UIButton!
     @IBOutlet private weak var feedRelatedVideosLoadingActivityIndicator: UIActivityIndicatorView!
@@ -144,10 +145,14 @@ extension FeedDetailViewController: FeedDetailViewInterface {
         
         enableNavigationBarButtons(true)
         
+        hideRelatedVideosContainer()
+        
         if feedContent.isVideo {
-            showRelatedVideosContainerAnimating(true)
-        } else {
-            hideRelatedVideosContainer()
+            showWaitingView(with: .loading)
+            let deadline = DispatchTime.now() + 0.3
+            DispatchQueue.main.asyncAfter(deadline: deadline) { [weak self] in
+                self?.showRelatedVideosContainer(animating: true)
+            }
         }
     }
     
@@ -155,23 +160,42 @@ extension FeedDetailViewController: FeedDetailViewInterface {
         switch type {
         case .loading:
             feedRelatedVideosLoadingLabel.text = type.labelText
+            feedRelatedVideosLoadingView.isHidden = false
             feedRelatedVideosLoadingLabel.isHidden = false
             feedRelatedVideosLoadingRetryButton.isHidden = true
             feedRelatedVideosLoadingActivityIndicator.isHidden = false
         case .error:
             feedRelatedVideosLoadingLabel.text = type.labelText
+            feedRelatedVideosLoadingView.isHidden = false
             feedRelatedVideosLoadingLabel.isHidden = false
             feedRelatedVideosLoadingRetryButton.isHidden = false
             feedRelatedVideosLoadingActivityIndicator.isHidden = true
         case .success:
-            feedRelatedVideosLoadingLabel.isHidden = true
-            feedRelatedVideosLoadingRetryButton.isHidden = true
-            feedRelatedVideosLoadingActivityIndicator.isHidden = true
+            feedRelatedVideosLoadingView.isHidden = true
         }
     }
     
     func scrollCollectionToFirstItem() {
         collectionView.contentOffset.x = 0
+    }
+    
+    func showRelatedVideosContainer(animating: Bool) {
+        if animating {
+            UIView.animate(withDuration: 0.6,
+                           delay: 0.4, usingSpringWithDamping: 1.0,
+                           initialSpringVelocity: 1.0,
+                           options: [.curveEaseInOut], animations: {
+                            
+                            self.feedRelatedVideosContainer.isHidden = false
+                            self.feedRelatedVideosContainerBottom.constant = 0
+                            self.view.layoutIfNeeded()
+                            
+            }, completion: { (Bool) -> Void in
+                self.presenter.loadRelatedVideos(self.feedContent?.relatedVideosPage)
+            })
+        } else {
+            self.feedRelatedVideosContainerBottom.constant = 0
+        }
     }
     
 }
@@ -190,25 +214,6 @@ extension FeedDetailViewController {
         navigationItem.rightBarButtonItems?.forEach() { $0.isEnabled = enable }
     }
     
-    private func showRelatedVideosContainerAnimating(_ animating: Bool) {
-        if animating {
-            UIView.animate(withDuration: 0.6,
-                           delay: 0.0, usingSpringWithDamping: 1.0,
-                           initialSpringVelocity: 1.0,
-                           options: [.curveEaseInOut], animations: {
-                            
-                            self.feedRelatedVideosContainer.isHidden = false
-                            self.feedRelatedVideosContainerBottom.constant = 0
-                            self.view.layoutIfNeeded()
-                            
-            }, completion: { (Bool) -> Void in
-                self.presenter.loadRelatedVideos(self.feedContent?.relatedVideosPage)
-            })
-        } else {
-            self.feedRelatedVideosContainerBottom.constant = 0
-        }
-    }
-    
     private func hideRelatedVideosContainer() {
         feedRelatedVideosContainerBottom.constant = feedRelatedVideosContainerHeight.constant
         feedRelatedVideosContainer.isHidden = true
@@ -221,7 +226,7 @@ extension FeedDetailViewController {
 
 extension FeedDetailViewController: UICollectionViewDelegate {
     
-    private func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         presenter.didSelectItem(at: indexPath)
     }
     

@@ -9,6 +9,8 @@
 //
 
 import UIKit
+import AVKit
+import SafariServices
 
 final class FeedDetailPresenter {
 
@@ -33,24 +35,41 @@ final class FeedDetailPresenter {
 
 extension FeedDetailPresenter: FeedDetailPresenterInterface {
     
-    func setFeedDetailFromSplitViewController(_ feedContent: FeedContent) {
-        
-    }
-    
     func didPressPlay() {
-        
+        guard let urlString = _view.feedContent?.url, let urlToOpen = URL(string: urlString) else {
+            _wireframe.showSimpleAlert(message: "Couldn't play the video.")
+            return
+        }
+        let player = AVPlayer(url: urlToOpen)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        playerViewController.player?.play()
+        _wireframe.show(playerViewController, with: .present, animated: true)
     }
     
     func didPressShare() {
+        let title = _view.feedContent?.title ?? ""
+        var activityItems: [Any] = [title]
+        if let urlString = _view.feedContent?.url, let url = URL(string: urlString) {
+            activityItems.append(url)
+        }
         
+        let activityViewController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+        _wireframe.show(activityViewController, with: .present, animated: true)
     }
     
     func didPressBookmark() {
-        
+        //Aqui entraria um request POST porém este projeto é apenas utiliza um serviço mock
     }
     
     func didPressUrl() {
-        
+        guard let urlString = _view.feedContent?.url, let urlToOpen = URL(string: urlString) else { return }
+        let safariVC = SFSafariViewController(url: urlToOpen)
+        safariVC.dismissButtonStyle = .close
+        safariVC.preferredBarTintColor = .mainColor
+        safariVC.preferredControlTintColor = .black
+        safariVC.modalPresentationStyle = .overFullScreen
+        _wireframe.show(safariVC, with: .present, animated: true)
     }
     
     func numberOfSections() -> Int {
@@ -72,8 +91,8 @@ extension FeedDetailPresenter: FeedDetailPresenterInterface {
     
     func loadRelatedVideos(_ relatedVideosPage: Int?) {
         _feedRelatedVideos = []
+        _view.showWaitingView(with: .loading)
         if let page = relatedVideosPage {
-            _view.showWaitingView(with: .loading)
             _interactor.getRelatedVideos(page: page)
         }
     }

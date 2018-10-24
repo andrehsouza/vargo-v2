@@ -20,6 +20,7 @@ protocol WireframeInterface: class {
     func dismiss(animated: Bool)
     func show(_ wireframe: BaseWireframe, with transition: Transition, animated: Bool)
     func show(_ viewController: UIViewController, with transition: Transition, animated: Bool)
+    func showSimpleAlert(message: String)
 }
 
 class BaseWireframe {
@@ -82,6 +83,22 @@ extension BaseWireframe: WireframeInterface {
         case .root:
             navigationController?.setViewControllers([viewController], animated: animated)
         }
+    }
+    
+    func showSimpleAlert(message: String) {
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        showAlert(with: "Something went wrong", message: message, actions: [okAction])
+    }
+    
+}
+
+
+extension BaseWireframe {
+    
+    private func showAlert(with title: String?, message: String?, actions: [UIAlertAction]) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        actions.forEach { alert.addAction($0) }
+        navigationController?.present(alert, animated: true, completion: nil)
     }
     
 }

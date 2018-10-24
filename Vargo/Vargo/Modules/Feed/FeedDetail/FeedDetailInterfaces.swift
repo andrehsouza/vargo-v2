@@ -18,6 +18,7 @@ protocol FeedDetailViewInterface: ViewInterface {
     func showfeedContent()
     func showWaitingView(with type: FeedDetailLoadingType)
     func scrollCollectionToFirstItem()
+    func showRelatedVideosContainer(animating: Bool)
 }
 
 protocol FeedDetailPresenterInterface: PresenterInterface {
