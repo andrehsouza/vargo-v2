@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3A36D7165DCB01B791D01699 /* Pods_VargoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED0D35CAC2C8366658CB55B /* Pods_VargoUITests.framework */; };
+		3CF02F8C29DA4386121EC3B4 /* Pods_Vargo_VargoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3C941831A0B5D89A4C1AE8 /* Pods_Vargo_VargoUITests.framework */; };
 		48344229912A84027670B12E /* Pods_Vargo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D14C212E14FD580FC72C07CB /* Pods_Vargo.framework */; };
 		4D1F22CA91AC3E33BFA4DFFE /* Pods_VargoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2E46C5026B48AAF82DE568 /* Pods_VargoTests.framework */; };
 		7B652485217F686F0033742D /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B652484217F686F0033742D /* Date+Extensions.swift */; };
@@ -157,8 +158,11 @@
 		7BF528E4217EBC41002F1189 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		7BF528E6217EBC7A002F1189 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		7C2E46C5026B48AAF82DE568 /* Pods_VargoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VargoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8650119585803D7B00852E4F /* Pods-Vargo-VargoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vargo-VargoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vargo-VargoUITests/Pods-Vargo-VargoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8D1ACF890D34B43AA862550A /* Pods-VargoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VargoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VargoUITests/Pods-VargoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B80C38D932B192E2E15954CB /* Pods-Vargo-VargoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vargo-VargoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vargo-VargoUITests/Pods-Vargo-VargoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D14C212E14FD580FC72C07CB /* Pods_Vargo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vargo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD3C941831A0B5D89A4C1AE8 /* Pods_Vargo_VargoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vargo_VargoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A36D7165DCB01B791D01699 /* Pods_VargoUITests.framework in Frameworks */,
+				3CF02F8C29DA4386121EC3B4 /* Pods_Vargo_VargoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +203,8 @@
 				1E5F38FF0FD9D73C7DA66E3F /* Pods-VargoTests.release.xcconfig */,
 				8D1ACF890D34B43AA862550A /* Pods-VargoUITests.debug.xcconfig */,
 				4AB0661FDC4C73FB5929B287 /* Pods-VargoUITests.release.xcconfig */,
+				B80C38D932B192E2E15954CB /* Pods-Vargo-VargoUITests.debug.xcconfig */,
+				8650119585803D7B00852E4F /* Pods-Vargo-VargoUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -519,6 +526,7 @@
 				D14C212E14FD580FC72C07CB /* Pods_Vargo.framework */,
 				7C2E46C5026B48AAF82DE568 /* Pods_VargoTests.framework */,
 				3ED0D35CAC2C8366658CB55B /* Pods_VargoUITests.framework */,
+				DD3C941831A0B5D89A4C1AE8 /* Pods_Vargo_VargoUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -553,7 +561,6 @@
 				7BCA394A217E103A00F7AAB4 /* Sources */,
 				7BCA394B217E103A00F7AAB4 /* Frameworks */,
 				7BCA394C217E103A00F7AAB4 /* Resources */,
-				F94FF3FC8628D9C8763C7082 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -573,7 +580,6 @@
 				7BCA3955217E103A00F7AAB4 /* Sources */,
 				7BCA3956217E103A00F7AAB4 /* Frameworks */,
 				7BCA3957217E103A00F7AAB4 /* Resources */,
-				F0CE639578CC5DBF4A51AE75 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -735,50 +741,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F0CE639578CC5DBF4A51AE75 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-VargoUITests/Pods-VargoUITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
-				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VargoUITests/Pods-VargoUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F94FF3FC8628D9C8763C7082 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-VargoTests/Pods-VargoTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
-				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VargoTests/Pods-VargoTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1041,7 +1003,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 79A5E764093A0CF08E4B918D /* Pods-VargoTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 959WMEP4YD;
@@ -1063,7 +1025,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1E5F38FF0FD9D73C7DA66E3F /* Pods-VargoTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 959WMEP4YD;
@@ -1085,7 +1047,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8D1ACF890D34B43AA862550A /* Pods-VargoUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 959WMEP4YD;
 				INFOPLIST_FILE = VargoUITests/Info.plist;
@@ -1106,7 +1068,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AB0661FDC4C73FB5929B287 /* Pods-VargoUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 959WMEP4YD;
 				INFOPLIST_FILE = VargoUITests/Info.plist;

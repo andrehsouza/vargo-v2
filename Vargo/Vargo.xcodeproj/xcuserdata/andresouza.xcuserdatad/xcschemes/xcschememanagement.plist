@@ -4,10 +4,28 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Vargo.xcscheme</key>
+		<key>Vargo.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>6</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>7BCA3939217E103900F7AAB4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7BCA394D217E103A00F7AAB4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7BCA3958217E103A00F7AAB4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

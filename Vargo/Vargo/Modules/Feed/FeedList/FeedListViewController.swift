@@ -30,6 +30,7 @@ final class FeedListViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+        setAccessibility()
     }
 	
 }
@@ -74,6 +75,11 @@ extension FeedListViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(FeedArticleTableViewCell.self)
+    }
+    
+    private func setAccessibility() {
+        footerActivity.isAccessibilityElement = true
+        footerActivity.accessibilityIdentifier = "loading"
     }
 
 }

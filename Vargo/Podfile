@@ -11,14 +11,17 @@ end
 
 target 'Vargo' do
     shared_pods
-end
-
-target 'VargoTests' do
-    shared_pods
-end
-
-target 'VargoUITests' do
-    shared_pods
+    
+    target 'VargoTests' do
+        inherit! :search_paths
+        # Pods for testing
+    end
+    
+    target 'VargoUITests' do
+        inherit! :search_paths
+        # Pods for UI testing
+    end
+    
 end
 
 # Workaround for Cocoapods issue
