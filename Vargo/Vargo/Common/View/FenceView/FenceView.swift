@@ -29,7 +29,7 @@ extension FenceView {
         activityIndicator.startAnimating()
     }
     
-    func showErrorView(error: ErrorInterface, target: Any?, action: Selector?) {
+    func showErrorView(error: ErrorResponse, target: Any?, action: Selector?) {
         errorView.isHidden = false
         messageLbl.text = error.message
         loadingView.isHidden = true

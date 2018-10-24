@@ -44,7 +44,7 @@ extension APIService {
             case .success:
                 
                 guard let data = response.data else {
-                    completion(.failure(ErrorResponse("Empty data.")))
+                    completion(.failure(.invalidData))
                     return
                 }
                 
@@ -52,7 +52,7 @@ extension APIService {
                     let model = try JSONDecoder().decode(T.self, from: data)
                     completion(.success(model))
                 } catch {
-                    completion(.failure(ErrorResponse("Decode error: \(error.localizedDescription)")))
+                    completion(.failure(.decodeError))
                 }
                 
             case .failure:

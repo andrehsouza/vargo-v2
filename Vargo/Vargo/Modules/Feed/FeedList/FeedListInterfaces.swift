@@ -23,7 +23,7 @@ protocol FeedListViewInterface: ViewInterface {
     func showFenceLoading(_ loading: Bool)
     func showFooterLoading(_ loading: Bool)
     func showFooterUpdatedMessage(message: String)
-    func showError(_ error: ErrorInterface, target: Any, action: Selector)
+    func showError(_ error: ErrorResponse, target: Any, action: Selector)
 }
 
 protocol FeedListPresenterInterface: PresenterInterface {

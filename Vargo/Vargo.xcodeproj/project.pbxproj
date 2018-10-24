@@ -58,8 +58,7 @@
 		7BCA39D3217E5CD500F7AAB4 /* RequestResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39D2217E5CD500F7AAB4 /* RequestResultType.swift */; };
 		7BCA39DD217E606200F7AAB4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39DC217E606200F7AAB4 /* Constants.swift */; };
 		7BCA39DF217E623B00F7AAB4 /* VUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39DE217E623B00F7AAB4 /* VUrl.swift */; };
-		7BCA39E3217E637800F7AAB4 /* ResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39E1217E637800F7AAB4 /* ResponseType.swift */; };
-		7BCA39E4217E637800F7AAB4 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39E2217E637800F7AAB4 /* ErrorResponse.swift */; };
+		7BCA39E3217E637800F7AAB4 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39E1217E637800F7AAB4 /* ErrorResponse.swift */; };
 		7BCA39EA217E6F2000F7AAB4 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39E9217E6F2000F7AAB4 /* Array+Extension.swift */; };
 		7BF528D8217EB47E002F1189 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF528D6217EB47D002F1189 /* UITableView+Extension.swift */; };
 		7BF528D9217EB47E002F1189 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF528D7217EB47E002F1189 /* UITableViewCell+Extension.swift */; };
@@ -148,8 +147,7 @@
 		7BCA39D2217E5CD500F7AAB4 /* RequestResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResultType.swift; sourceTree = "<group>"; };
 		7BCA39DC217E606200F7AAB4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7BCA39DE217E623B00F7AAB4 /* VUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VUrl.swift; sourceTree = "<group>"; };
-		7BCA39E1217E637800F7AAB4 /* ResponseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseType.swift; sourceTree = "<group>"; };
-		7BCA39E2217E637800F7AAB4 /* ErrorResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		7BCA39E1217E637800F7AAB4 /* ErrorResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		7BCA39E9217E6F2000F7AAB4 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		7BF528D6217EB47D002F1189 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		7BF528D7217EB47E002F1189 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
@@ -469,8 +467,7 @@
 			isa = PBXGroup;
 			children = (
 				7BCA39D2217E5CD500F7AAB4 /* RequestResultType.swift */,
-				7BCA39E2217E637800F7AAB4 /* ErrorResponse.swift */,
-				7BCA39E1217E637800F7AAB4 /* ResponseType.swift */,
+				7BCA39E1217E637800F7AAB4 /* ErrorResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -810,7 +807,6 @@
 				7B65248E217F6CC50033742D /* UICollectionView+Extension.swift in Sources */,
 				7BCA39BD217E442B00F7AAB4 /* VImageView.swift in Sources */,
 				7BCA39A1217E351D00F7AAB4 /* FeedListWireframe.swift in Sources */,
-				7BCA39E4217E637800F7AAB4 /* ErrorResponse.swift in Sources */,
 				7BCA39C1217E46E400F7AAB4 /* UIFont+Extension.swift in Sources */,
 				7BCA39C5217E56E700F7AAB4 /* FeedArticleTableViewCell.swift in Sources */,
 				7BCA398E217E2B4900F7AAB4 /* UIColor+Extension.swift in Sources */,
@@ -827,7 +823,7 @@
 				7BCA39AC217E357D00F7AAB4 /* FeedDetailViewController.swift in Sources */,
 				7BCA39D0217E5C8C00F7AAB4 /* APIService.swift in Sources */,
 				7BCA399E217E351D00F7AAB4 /* FeedListPresenter.swift in Sources */,
-				7BCA39E3217E637800F7AAB4 /* ResponseType.swift in Sources */,
+				7BCA39E3217E637800F7AAB4 /* ErrorResponse.swift in Sources */,
 				7BCA3990217E2BDF00F7AAB4 /* NSObject+Extension.swift in Sources */,
 				7B652485217F686F0033742D /* Date+Extensions.swift in Sources */,
 				7BCA39EA217E6F2000F7AAB4 /* Array+Extension.swift in Sources */,

@@ -29,7 +29,7 @@ extension BaseViewController {
         }
     }
     
-    func showFenceError(error: ErrorInterface, target: Any?, action: Selector?) {
+    func showFenceError(error: ErrorResponse, target: Any?, action: Selector?) {
         verifyFenceView()
         fenceView.showErrorView(error: error, target: target, action: action)
         view.bringSubviewToFront(fenceView)
