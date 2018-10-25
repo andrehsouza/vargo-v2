@@ -32,9 +32,10 @@ enum FeedDetailLoadingType {
 final class FeedDetailViewController: UIViewController {
     
     @IBOutlet private weak var feedItemBookmarkButton: UIButton!
+    @IBOutlet private weak var shareBarButtonItem: UIBarButtonItem!
     
     @IBOutlet private weak var feedItemImageView: VImageView!
-    @IBOutlet private weak var feedItemPlayerImageView: UIButton!
+    @IBOutlet private weak var feedItemPlayerButton: UIButton!
     
     @IBOutlet private weak var feedItemDateLabel: UILabel!
     
@@ -63,7 +64,7 @@ final class FeedDetailViewController: UIViewController {
 
     // MARK: - Public properties -
 
-    var presenter: FeedDetailPresenterInterface!
+    var presenter: FeedDetailPresenterInterface?
     var feedContent: FeedItemDetailInterface? {
         didSet {
             if isViewLoaded {
@@ -77,26 +78,27 @@ final class FeedDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         showfeedContent()
+        setupAccessibility()
     }
     
     @IBAction func touchPlay(_ sender: Any) {
-        presenter.didPressPlay()
+        presenter?.didPressPlay()
     }
     
     @IBAction func touchBookmark(_ sender: Any) {
-        presenter.didPressBookmark()
+        presenter?.didPressBookmark()
     }
     
     @IBAction func touchShare(_ sender: Any) {
-        presenter.didPressShare()
+        presenter?.didPressShare()
     }
     
     @IBAction func touchURL(_ sender: Any) {
-        presenter.didPressUrl()
+        presenter?.didPressUrl()
     }
     
     @IBAction func touchRetry(_ sender: Any) {
-        presenter.loadRelatedVideos(feedContent?.relatedVideosPage)
+        presenter?.loadRelatedVideos(feedContent?.relatedVideosPage)
     }
 	
 }
@@ -117,7 +119,7 @@ extension FeedDetailViewController: FeedDetailViewInterface {
         
         title = feedContent.screenTitle
         
-        feedItemPlayerImageView.isHidden = !feedContent.isVideo
+        feedItemPlayerButton.isHidden = !feedContent.isVideo
         
         feedItemDateLabel.text = feedContent.date
         
@@ -191,7 +193,7 @@ extension FeedDetailViewController: FeedDetailViewInterface {
                             self.view.layoutIfNeeded()
                             
             }, completion: { (Bool) -> Void in
-                self.presenter.loadRelatedVideos(self.feedContent?.relatedVideosPage)
+                self.presenter?.loadRelatedVideos(self.feedContent?.relatedVideosPage)
             })
         } else {
             self.feedRelatedVideosContainerBottom.constant = 0
@@ -219,6 +221,13 @@ extension FeedDetailViewController {
         feedRelatedVideosContainer.isHidden = true
     }
     
+    //Tests
+    private func setupAccessibility() {
+        shareBarButtonItem.accessibilityIdentifier = "shareBarButtonItem"
+        feedItemUrlButton.accessibilityIdentifier = "feedUrlButton"
+        feedItemPlayerButton.accessibilityIdentifier = "feedDetailPlayerButton"
+    }
+    
 }
 
 
@@ -227,7 +236,7 @@ extension FeedDetailViewController {
 extension FeedDetailViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        presenter.didSelectItem(at: indexPath)
+        presenter?.didSelectItem(at: indexPath)
     }
     
 }
@@ -237,12 +246,12 @@ extension FeedDetailViewController: UICollectionViewDelegate {
 extension FeedDetailViewController: UICollectionViewDataSource {
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return presenter.numberOfItems()
+        return presenter?.numberOfItems() ?? 0
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(forIndexPath: indexPath) as FeedRelatedVideoCollectionViewCell
-        cell.item = presenter.item(at: indexPath)
+        cell.item = presenter?.item(at: indexPath)
         return cell
     }
     

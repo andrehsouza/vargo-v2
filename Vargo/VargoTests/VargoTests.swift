@@ -22,26 +22,28 @@ class VargoTests: XCTestCase {
 
     func testFeedRequest() {
         let url = VUrl.path(for: .feed(page: 1))
-        let config = URLSessionConfiguration.default
-        config.timeoutIntervalForRequest = 30
-        config.timeoutIntervalForResource = 30
-        let alamoFireManager = Alamofire.SessionManager(configuration: config)
-        
-        alamoFireManager.request(url, method: .get, encoding: JSONEncoding.default).validate(statusCode: 200..<300).responseJSON { response in
-            XCTAssert((response.data == nil) || (response.result.value is Feed))
-        }
+        let service = APIService(with: url)
+        service.getData({ (result: RequestResultType<Feed>) in
+            switch result {
+            case .success(let feed):
+                XCTAssert(feed.items.count > 0, "Feed with list of items")
+                break
+            case .failure(let errorResponse):
+                XCTAssert(!errorResponse.message.isEmpty, "Request error with message")
+                break
+            }
+        })
     }
     
-    func testRelatedVideosRequest() {
-        let url = VUrl.path(for: .relatedVideos(page: 1))
-        let config = URLSessionConfiguration.default
-        config.timeoutIntervalForRequest = 30
-        config.timeoutIntervalForResource = 30
-        let alamoFireManager = Alamofire.SessionManager(configuration: config)
-        
-        alamoFireManager.request(url, method: .get, encoding: JSONEncoding.default).validate(statusCode: 200..<300).responseJSON { response in
-            XCTAssert((response.data == nil) || (response.result.value is Feed))
+    func testJSONDecoder() throws {
+        let bundle = Bundle.main
+        guard let url = bundle.url(forResource: "Feed", withExtension: "json") else {
+            XCTFail("Missing file: Feed.json")
+            return
         }
+        let jsonData = try Data(contentsOf: url)
+        let feed = try JSONDecoder().decode(Feed.self, from: jsonData)
+        XCTAssert(feed.totalPages > 0)
     }
 
 }

@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A36D7165DCB01B791D01699 /* Pods_VargoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED0D35CAC2C8366658CB55B /* Pods_VargoUITests.framework */; };
-		48344229912A84027670B12E /* Pods_Vargo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D14C212E14FD580FC72C07CB /* Pods_Vargo.framework */; };
-		4D1F22CA91AC3E33BFA4DFFE /* Pods_VargoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2E46C5026B48AAF82DE568 /* Pods_VargoTests.framework */; };
+		27C447E39404A705B5C64A7B /* Pods_VargoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 427EE13C185E346D651FF524 /* Pods_VargoUITests.framework */; };
 		7B652485217F686F0033742D /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B652484217F686F0033742D /* Date+Extensions.swift */; };
 		7B652489217F6C240033742D /* FeedRelatedVideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B652487217F6C230033742D /* FeedRelatedVideoCollectionViewCell.xib */; };
 		7B65248A217F6C240033742D /* FeedRelatedVideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B652488217F6C240033742D /* FeedRelatedVideoCollectionViewCell.swift */; };
 		7B65248C217F6CA50033742D /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65248B217F6CA50033742D /* UICollectionViewCell+Extension.swift */; };
 		7B65248E217F6CC50033742D /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65248D217F6CC50033742D /* UICollectionView+Extension.swift */; };
 		7B65B0D12180A7B0002A98FE /* VButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65B0D02180A7B0002A98FE /* VButton.swift */; };
+		7BBCC0A321815A16003309A3 /* XCTestCase+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBCC0A221815A16003309A3 /* XCTestCase+Extension.swift */; };
 		7BCA393E217E103900F7AAB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA393D217E103900F7AAB4 /* AppDelegate.swift */; };
 		7BCA3953217E103A00F7AAB4 /* VargoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA3952217E103A00F7AAB4 /* VargoTests.swift */; };
 		7BCA395E217E103A00F7AAB4 /* VargoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA395D217E103A00F7AAB4 /* VargoUITests.swift */; };
@@ -60,6 +59,7 @@
 		7BCA39DF217E623B00F7AAB4 /* VUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39DE217E623B00F7AAB4 /* VUrl.swift */; };
 		7BCA39E3217E637800F7AAB4 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39E1217E637800F7AAB4 /* ErrorResponse.swift */; };
 		7BCA39EA217E6F2000F7AAB4 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA39E9217E6F2000F7AAB4 /* Array+Extension.swift */; };
+		7BE48EC0218231C90060B736 /* Feed.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BE48EBF218231C90060B736 /* Feed.json */; };
 		7BF528D8217EB47E002F1189 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF528D6217EB47D002F1189 /* UITableView+Extension.swift */; };
 		7BF528D9217EB47E002F1189 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF528D7217EB47E002F1189 /* UITableViewCell+Extension.swift */; };
 		7BF528DB217EB4BB002F1189 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF528DA217EB4BB002F1189 /* ReusableViewProtocol.swift */; };
@@ -67,6 +67,8 @@
 		7BF528E1217EB95A002F1189 /* FenceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BF528DF217EB95A002F1189 /* FenceView.xib */; };
 		7BF528E5217EBC41002F1189 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF528E4217EBC41002F1189 /* BaseViewController.swift */; };
 		7BF528E7217EBC7B002F1189 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF528E6217EBC7A002F1189 /* UIView+Extension.swift */; };
+		816B7919A587758290101F93 /* Pods_VargoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB2F57D92E2498646D6FFB8 /* Pods_VargoTests.framework */; };
+		C3A2235F51CE74C8E1D9C004 /* Pods_Vargo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6611AAC89F706EF1868E1142 /* Pods_Vargo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,8 +91,9 @@
 /* Begin PBXFileReference section */
 		1E5F38FF0FD9D73C7DA66E3F /* Pods-VargoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VargoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VargoTests/Pods-VargoTests.release.xcconfig"; sourceTree = "<group>"; };
 		35F4420738C03F1AF808EDCF /* Pods-Vargo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vargo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vargo/Pods-Vargo.release.xcconfig"; sourceTree = "<group>"; };
-		3ED0D35CAC2C8366658CB55B /* Pods_VargoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VargoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		427EE13C185E346D651FF524 /* Pods_VargoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VargoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AB0661FDC4C73FB5929B287 /* Pods-VargoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VargoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VargoUITests/Pods-VargoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6611AAC89F706EF1868E1142 /* Pods_Vargo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vargo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71E5C2E49EA86C323967A89D /* Pods-Vargo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vargo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vargo/Pods-Vargo.debug.xcconfig"; sourceTree = "<group>"; };
 		79A5E764093A0CF08E4B918D /* Pods-VargoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VargoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VargoTests/Pods-VargoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B652484217F686F0033742D /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
@@ -99,6 +102,7 @@
 		7B65248B217F6CA50033742D /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
 		7B65248D217F6CC50033742D /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		7B65B0D02180A7B0002A98FE /* VButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VButton.swift; sourceTree = "<group>"; };
+		7BBCC0A221815A16003309A3 /* XCTestCase+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extension.swift"; sourceTree = "<group>"; };
 		7BCA393A217E103900F7AAB4 /* Vargo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vargo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCA393D217E103900F7AAB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BCA3949217E103A00F7AAB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 		7BCA39DE217E623B00F7AAB4 /* VUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VUrl.swift; sourceTree = "<group>"; };
 		7BCA39E1217E637800F7AAB4 /* ErrorResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		7BCA39E9217E6F2000F7AAB4 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		7BE48EBF218231C90060B736 /* Feed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Feed.json; sourceTree = "<group>"; };
 		7BF528D6217EB47D002F1189 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		7BF528D7217EB47E002F1189 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		7BF528DA217EB4BB002F1189 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
@@ -156,9 +161,8 @@
 		7BF528DF217EB95A002F1189 /* FenceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FenceView.xib; sourceTree = "<group>"; };
 		7BF528E4217EBC41002F1189 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		7BF528E6217EBC7A002F1189 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		7C2E46C5026B48AAF82DE568 /* Pods_VargoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VargoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1ACF890D34B43AA862550A /* Pods-VargoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VargoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VargoUITests/Pods-VargoUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		D14C212E14FD580FC72C07CB /* Pods_Vargo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vargo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AB2F57D92E2498646D6FFB8 /* Pods_VargoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VargoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48344229912A84027670B12E /* Pods_Vargo.framework in Frameworks */,
+				C3A2235F51CE74C8E1D9C004 /* Pods_Vargo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +178,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D1F22CA91AC3E33BFA4DFFE /* Pods_VargoTests.framework in Frameworks */,
+				816B7919A587758290101F93 /* Pods_VargoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +186,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A36D7165DCB01B791D01699 /* Pods_VargoUITests.framework in Frameworks */,
+				27C447E39404A705B5C64A7B /* Pods_VargoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +213,14 @@
 				7B652487217F6C230033742D /* FeedRelatedVideoCollectionViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		7BBCC0A1218159FB003309A3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7BBCC0A221815A16003309A3 /* XCTestCase+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		7BCA3931217E103900F7AAB4 = {
@@ -258,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				7BCA395D217E103A00F7AAB4 /* VargoUITests.swift */,
+				7BBCC0A1218159FB003309A3 /* Extensions */,
 				7BCA395F217E103A00F7AAB4 /* Info.plist */,
 			);
 			path = VargoUITests;
@@ -334,6 +347,7 @@
 		7BCA3972217E10A300F7AAB4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7BE48EBE218231B80060B736 /* JSON */,
 				7BCA3974217E12DB00F7AAB4 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -480,6 +494,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		7BE48EBE218231B80060B736 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				7BE48EBF218231C90060B736 /* Feed.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		7BF528DC217EB4E3002F1189 /* ReusableViewProtocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -516,9 +538,9 @@
 		9CECD17FAF3CCEC7B7BD0782 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D14C212E14FD580FC72C07CB /* Pods_Vargo.framework */,
-				7C2E46C5026B48AAF82DE568 /* Pods_VargoTests.framework */,
-				3ED0D35CAC2C8366658CB55B /* Pods_VargoUITests.framework */,
+				6611AAC89F706EF1868E1142 /* Pods_Vargo.framework */,
+				9AB2F57D92E2498646D6FFB8 /* Pods_VargoTests.framework */,
+				427EE13C185E346D651FF524 /* Pods_VargoUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -553,7 +575,6 @@
 				7BCA394A217E103A00F7AAB4 /* Sources */,
 				7BCA394B217E103A00F7AAB4 /* Frameworks */,
 				7BCA394C217E103A00F7AAB4 /* Resources */,
-				F94FF3FC8628D9C8763C7082 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -573,7 +594,6 @@
 				7BCA3955217E103A00F7AAB4 /* Sources */,
 				7BCA3956217E103A00F7AAB4 /* Frameworks */,
 				7BCA3957217E103A00F7AAB4 /* Resources */,
-				F0CE639578CC5DBF4A51AE75 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -634,6 +654,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BF528E1217EB95A002F1189 /* FenceView.xib in Resources */,
+				7BE48EC0218231C90060B736 /* Feed.json in Resources */,
 				7BCA397B217E130600F7AAB4 /* LaunchScreen.storyboard in Resources */,
 				7B652489217F6C240033742D /* FeedRelatedVideoCollectionViewCell.xib in Resources */,
 				7BCA3975217E12DB00F7AAB4 /* Assets.xcassets in Resources */,
@@ -670,13 +691,11 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Vargo/Pods-Vargo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
-				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -735,50 +754,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F0CE639578CC5DBF4A51AE75 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-VargoUITests/Pods-VargoUITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
-				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VargoUITests/Pods-VargoUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F94FF3FC8628D9C8763C7082 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-VargoTests/Pods-VargoTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
-				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VargoTests/Pods-VargoTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -850,6 +825,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BBCC0A321815A16003309A3 /* XCTestCase+Extension.swift in Sources */,
 				7BCA395E217E103A00F7AAB4 /* VargoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1041,7 +1017,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 79A5E764093A0CF08E4B918D /* Pods-VargoTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 959WMEP4YD;
@@ -1063,7 +1039,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1E5F38FF0FD9D73C7DA66E3F /* Pods-VargoTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 959WMEP4YD;
@@ -1085,7 +1061,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8D1ACF890D34B43AA862550A /* Pods-VargoUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 959WMEP4YD;
 				INFOPLIST_FILE = VargoUITests/Info.plist;
@@ -1106,7 +1082,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AB0661FDC4C73FB5929B287 /* Pods-VargoUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 959WMEP4YD;
 				INFOPLIST_FILE = VargoUITests/Info.plist;

@@ -1,0 +1,102 @@
+{
+  "page":1,
+  "totalPages":4,
+  "items":[  
+         {  
+            "article":{  
+               "author":"Devin Coldewey",
+               "title":"Court victory legalizes 3D-printable gun blueprints",
+               "description":"A multi-year legal battle over the ability to distribute computer models of gun parts and replicate them in 3D printers has ended in defeat for government authorities who sought to prevent the practice. Cody Wilson, the gunmaker and free speech advocate behin…",
+               "url":"https://techcrunch.com/2018/07/10/court-victory-legalizes-3d-printable-gun-blueprints/",
+               "imageUrl":"https://techcrunch.com/wp-content/uploads/2018/07/defcad.jpg?w=693",
+               "date":"2018-07-10T23:19:00Z"
+            }
+         },
+         {  
+            "article":{  
+               "author":"Matthew DeBord",
+               "title":"Tesla fans and critics both need a reality check",
+               "description":"The reality of Tesla's business is far more modest than the war over its stock price and market cap would suggest. Tesla is ultimately a small car company operating in a small market for electric vehicles.",
+               "url":"http://www.businessinsider.com/tesla-fans-and-critics-are-both-wrong-about-company-2018-7",
+               "imageUrl":"https://amp.businessinsider.com/images/5a959590aae6052a008b467a-1920-960.jpg",
+               "date":"2018-07-10T22:28:55Z"
+            }
+         },
+         {  
+            "video":{  
+               "title":"Charger Desktop Ladegerät mit Qualcomm QC 3.0",
+               "thumbnail":"https://images.unsplash.com/photo-1528874077309-9e15912d86e9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=300&h=200&fit=crop&ixid=eyJhcHBfaWQiOjF9&s=d82494fad9793206e5043f3dd35c6d65",
+               "videoUrl":"https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",
+               "relatedVideos":3
+            }
+         },
+         {  
+            "article":{  
+               "author":"Anthonie",
+               "title":"Univision CEO: We're Selling The Onion, Gizmodo Because They Do 'Not Enhance Our Core Mission'",
+               "description":"Univision confirms in a terse email to staff that it is selling Onion Inc. and Gizmodo Media Group.",
+               "url":"https://www.thedailybeast.com/univision-ceo-were-selling-the-onion-gizmodo-because-they-do-not-enhance-our-core-mission",
+               "imageUrl":"https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1440,w_2560,x_0,y_0/dpr_2.0/c_limit,w_740/fl_lossy,q_auto/v1531259901/uni_w2d4et_ohm83c",
+               "date":"2018-07-10T22:14:30Z"
+            }
+         },
+         {  
+            "article":{  
+               "author":"Greg Trotter",
+               "title":"Fresh Market closes stores, including 2 in Chicago area, as it tries to survive as 'specialty' store",
+               "description":"The Fresh Market, an upscale grocery chain headquartered in North Carolina, announced Monday it will close 15 stores nationally, including four in Illinois.",
+               "url":"http://www.chicagotribune.com/business/ct-biz-fresh-market-closings-20180709-story.html",
+               "imageUrl":"https://images.unsplash.com/photo-1530021694813-ac7bbbf6bb2f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=300&h=200&fit=crop&ixid=eyJhcHBfaWQiOjF9&s=f33249b1aa934b23b608c574035a9f9e",
+               "date":"2018-07-10T21:25:00Z"
+            }
+         },
+         {  
+            "article":{  
+               "author":"",
+               "title":"Regulators Investigate Fast-Food Chains' Limits On Worker Recruitment",
+               "description":"Ten states and the District of Columbia are asking fast-food chains about the use of so-called \"no-poach\" agreements that limit the ability of workers to switch jobs.",
+               "url":"https://www.npr.org/2018/07/10/627682297/regulators-investigate-fast-food-chains-limits-on-worker-recruitment",
+               "imageUrl":"https://media.npr.org/assets/img/2018/07/10/gettyimages-680879588_wide-8677bb2fdd13014674e7efdc91317ae99d22480e.jpg?s=1400",
+               "date":"2018-07-10T21:21:20Z"
+            }
+         },
+         {  
+            "article":{  
+               "author":"ABC News",
+               "title":"Cities and states mull straw ban",
+               "description":"Starbucks announced it will be going strawless soon to help the environment, joining governments and other private companies, but people with disabilities may suffer.",
+               "url":"https://abcnews.go.com/Politics/cities-states-mull-straw-ban/story?id=56455746",
+               "imageUrl":"https://s.abcnews.com/images/US/banning-plastic-straws-gty-thg-180129_16x9_992.jpg",
+               "date":"2018-07-10T21:20:21Z"
+            }
+         },
+         {  
+            "article":{  
+               "author":"Sean O'Kane",
+               "title":"FBI charges former Apple employee with stealing trade secrets from self-driving car project",
+               "description":"The employee was allegedly trying to get a job at Alibaba-backed Xiaopeng Motors. He was arrested by the FBI while trying to leave the country over the weekend.",
+               "url":"https://www.theverge.com/2018/7/10/17556034/fbi-apple-trade-secrets-xpeng-self-driving",
+               "imageUrl":"https://cdn.vox-cdn.com/thumbor/q56s7XfKcRbkE6LXXxyggCZoZYU=/0x451:6300x3749/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/11671235/611380956.jpg.jpg",
+               "date":"2018-07-10T21:19:00Z"
+            }
+         },
+         {  
+            "article":{  
+               "author":"Ali Breland",
+               "title":"House Dems worry FCC move to 'streamline' complaints will hurt consumers",
+               "description":"Reps. Frank Pallone Jr. and Mike Doyle worry that the new changes will remove the FCC from this role, and instead force consumers into a complicated and costly legal process to address their issues.",
+               "url":"http://thehill.com/policy/technology/396357-house-democrats-worry-fcc-move-to-streamline-complaints-will-hurt-consumers",
+               "imageUrl":"https://images.unsplash.com/photo-1528979375023-c1e3916fe3c3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=300&h=200&fit=crop&ixid=eyJhcHBfaWQiOjF9&s=f9b2ea6d13099ad602ac060a1722d404",
+               "date":"2018-07-10T20:51:00Z"
+            }
+         },
+         {  
+            "video":{  
+               "title":"Power Support Ultrasuede Flip",
+               "thumbnail":"https://images.unsplash.com/photo-1530054221884-f6a6f5e699dc?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=300&h=200&fit=crop&ixid=eyJhcHBfaWQiOjF9&s=3315d7aca934013b22f2572629472b2d",
+               "videoUrl":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+               "relatedVideos":1
+            }
+         }
+     ]
+ }

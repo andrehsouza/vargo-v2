@@ -7,8 +7,14 @@
 //
 
 import XCTest
+import Foundation
+import AVKit
 
 class VargoUITests: XCTestCase {
+    
+    let kTimeout: TimeInterval = 20
+    
+    let app = XCUIApplication()
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -23,12 +29,86 @@ class VargoUITests: XCTestCase {
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        
     }
 
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testShowLoadingOnRequest() {
+        let loadingView = app.activityIndicators["loadingView"]
+        XCTAssertTrue(loadingView.exists)
+    }
+    
+    func testTapRowAndShareContent() {
+        app.tables.cells.firstMatch.tap()
+        app.navigationBars.buttons["shareBarButtonItem"].tap()
+        let activityList = app.otherElements["ActivityListView"]
+        XCTAssertTrue(activityList.exists)
+    }
+    
+    func testEndlessScrollFeedtableview() {
+        let loadingView = app.activityIndicators["loadingView"]
+        while loadingView.exists {
+            app.swipeUp()
+        }
+    }
+    
+    func testTapCells() {
+        wait(for: kTimeout)
+        let feedTableView = app.tables["feedTableView"]
+        
+        if feedTableView.cells.count > 0 {
+            for i in stride(from: 0, to: feedTableView.cells.count , by: 1) {
+                let tableCell = feedTableView.cells.element(boundBy: i)
+                if tableCell.exists && !tableCell.frame.isEmpty {
+                    tableCell.tap()
+                    wait(for: 2)
+                    app.navigationBars.buttons.element(boundBy: 0).tap()
+                } else {
+                    app.swipeUp()
+                    wait(for: 2)
+                }
+            }
+            
+            XCTAssertTrue(true, "Finished validating table cells")
+        } else {
+            XCTAssertTrue(false)
+        }
+    }
+    
+    func testLookForVideoContentAndTapThenClickPlay() {
+        wait(for: kTimeout)
+        let feedTableView = app.tables["feedTableView"]
+        
+        if feedTableView.cells.count > 0 {
+            for i in stride(from: 0, to: feedTableView.cells.count , by: 1) {
+                let tableCell = feedTableView.cells.element(boundBy: i)
+                if tableCell.exists && !tableCell.frame.isEmpty {
+                    tableCell.tap()
+                    wait(for: 1)
+
+                    let playerButton = app.scrollViews.otherElements.buttons["feedDetailPlayerButton"]
+                    if playerButton.exists {
+                        playerButton.tap()
+                        wait(for: 1)
+                        app.buttons["Done"].tap()
+                        break
+                    } else {
+                        app.navigationBars.buttons.element(boundBy: 0).tap()
+                    }
+                } else {
+                    app.swipeUp()
+                    wait(for: 2)
+                }
+            }
+        } else {
+            XCTAssertTrue(false)
+        }
+    }
+    
+    func testShowRowsOrFenceViewAfterRequest() {
+        wait(for: kTimeout)
+        let feedTableView = app.tables["feedTableView"]
+        let fenceView = app.otherElements["fenceView"] //In case of error requests
+        XCTAssertTrue((feedTableView.cells.count > 0) || fenceView.exists)
     }
 
 }

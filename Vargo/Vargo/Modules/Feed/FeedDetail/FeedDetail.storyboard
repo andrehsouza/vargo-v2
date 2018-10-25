@@ -227,7 +227,7 @@
                                         <rect key="frame" x="0.0" y="25" width="375" height="130"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="cEY-Yv-vif">
-                                                <rect key="frame" x="0.0" y="16" width="375" height="98"/>
+                                                <rect key="frame" x="0.0" y="25.5" width="375" height="79"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading items..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlH-hH-u3K">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="17"/>
@@ -236,7 +236,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nh6-W7-Igj">
-                                                        <rect key="frame" x="0.0" y="17" width="375" height="61"/>
+                                                        <rect key="frame" x="0.0" y="17" width="375" height="42"/>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                                         <state key="normal" image="ic_retry"/>
@@ -245,7 +245,7 @@
                                                         </connections>
                                                     </button>
                                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Dnc-1B-LWE">
-                                                        <rect key="frame" x="0.0" y="78" width="375" height="20"/>
+                                                        <rect key="frame" x="0.0" y="59" width="375" height="20"/>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </activityIndicatorView>
                                                 </subviews>
@@ -306,7 +306,7 @@
                     <navigationItem key="navigationItem" title="Detalhe" id="N4r-Bw-JXM">
                         <rightBarButtonItems>
                             <barButtonItem id="lW8-x7-l12">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tFk-3s-FEu">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tFk-3s-FEu">
                                     <rect key="frame" x="308" y="0.0" width="51" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="tintColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
@@ -338,7 +338,7 @@
                         <outlet property="feedItemDescriptionLabel" destination="aAa-vq-SXt" id="EK8-Tv-L7X"/>
                         <outlet property="feedItemFontTitleLabel" destination="NO2-JG-Voj" id="1Km-iJ-5hZ"/>
                         <outlet property="feedItemImageView" destination="frg-F0-cWK" id="KAU-qc-Pjv"/>
-                        <outlet property="feedItemPlayerImageView" destination="OFX-BC-Acm" id="Y79-WD-4UQ"/>
+                        <outlet property="feedItemPlayerButton" destination="OFX-BC-Acm" id="ePm-W6-dDn"/>
                         <outlet property="feedItemTitleLabel" destination="8CJ-oV-nWb" id="eFB-Vm-7MD"/>
                         <outlet property="feedItemUrlButton" destination="HwT-Jl-7OI" id="Fq7-BZ-vbQ"/>
                         <outlet property="feedRelatedVideosContainer" destination="oS7-dk-qBr" id="92Q-8r-qdd"/>
@@ -348,6 +348,7 @@
                         <outlet property="feedRelatedVideosLoadingLabel" destination="wlH-hH-u3K" id="dDy-I0-9ov"/>
                         <outlet property="feedRelatedVideosLoadingRetryButton" destination="Nh6-W7-Igj" id="nnc-wO-f9D"/>
                         <outlet property="feedRelatedVideosLoadingView" destination="GMa-Fe-rgC" id="Jvh-ar-tG5"/>
+                        <outlet property="shareBarButtonItem" destination="fpK-fn-Bqj" id="BVW-5a-MvE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UQG-it-FqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -356,10 +357,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_book_mark" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="ic_book_mark_selected" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="ic_place_holder" width="1500" height="1500"/>
-        <image name="ic_player" width="102.40000152587891" height="102.40000152587891"/>
-        <image name="ic_retry" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="ic_book_mark" width="21" height="21"/>
+        <image name="ic_book_mark_selected" width="21" height="21"/>
+        <image name="ic_place_holder" width="750" height="750"/>
+        <image name="ic_player" width="128" height="128"/>
+        <image name="ic_retry" width="32" height="32"/>
     </resources>
 </document>
