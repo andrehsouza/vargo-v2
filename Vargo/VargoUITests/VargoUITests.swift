@@ -8,8 +8,11 @@
 
 import XCTest
 import Foundation
+import AVKit
 
 class VargoUITests: XCTestCase {
+    
+    let kTimeout: TimeInterval = 20
     
     let app = XCUIApplication()
 
@@ -48,33 +51,64 @@ class VargoUITests: XCTestCase {
         }
     }
     
-    func testLookForVideoRowAndTapThenClickPlay() {
+    func testTapCells() {
+        wait(for: kTimeout)
         let feedTableView = app.tables["feedTableView"]
-
-        let promise = expectation(description: "Wait for table cells")
         
-        for i in stride(from: 0, to: feedTableView.cells.count , by: 1) {
-            let tableCell = feedTableView.cells.element(boundBy: i)
-            if tableCell.exists && !tableCell.frame.isEmpty {
-                tableCell.tap()
-                
-                if i == (feedTableView.cells.count - 1) {
-                    promise.fulfill()
+        if feedTableView.cells.count > 0 {
+            for i in stride(from: 0, to: feedTableView.cells.count , by: 1) {
+                let tableCell = feedTableView.cells.element(boundBy: i)
+                if tableCell.exists && !tableCell.frame.isEmpty {
+                    tableCell.tap()
+                    wait(for: 2)
+                    app.navigationBars.buttons.element(boundBy: 0).tap()
+                } else {
+                    app.swipeUp()
+                    wait(for: 2)
                 }
-                
-                app.navigationBars.buttons.element(boundBy: 0).tap()
-            } else {
-                app.swipeUp()
             }
+            
+            XCTAssertTrue(true, "Finished validating table cells")
+        } else {
+            XCTAssertTrue(false)
         }
-        
-        waitForExpectations(timeout: 20, handler: nil)
-        XCTAssertTrue(true, "Finished validating the table cells")
     }
     
-    func testShowFenceViewOnErrorConnection() {
-        let loadingView = app.otherElements["fenceView"]
-        XCTAssertTrue(loadingView.exists)
+    func testLookForVideoContentAndTapThenClickPlay() {
+        wait(for: kTimeout)
+        let feedTableView = app.tables["feedTableView"]
+        
+        if feedTableView.cells.count > 0 {
+            for i in stride(from: 0, to: feedTableView.cells.count , by: 1) {
+                let tableCell = feedTableView.cells.element(boundBy: i)
+                if tableCell.exists && !tableCell.frame.isEmpty {
+                    tableCell.tap()
+                    wait(for: 1)
+
+                    let playerButton = app.scrollViews.otherElements.buttons["feedDetailPlayerButton"]
+                    if playerButton.exists {
+                        playerButton.tap()
+                        wait(for: 1)
+                        app.buttons["Done"].tap()
+                        break
+                    } else {
+                        app.navigationBars.buttons.element(boundBy: 0).tap()
+                    }
+                } else {
+                    app.swipeUp()
+                    wait(for: 2)
+                }
+            }
+        } else {
+            XCTAssertTrue(false)
+        }
+    }
+    
+    func testShowRowsOrFenceViewAfterRequest() {
+        wait(for: kTimeout)
+        let feedTableView = app.tables["feedTableView"]
+        let fenceView = app.otherElements["fenceView"] //In case of error requests
+        XCTAssertTrue((feedTableView.cells.count > 0) || fenceView.exists)
     }
 
 }

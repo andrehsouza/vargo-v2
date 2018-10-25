@@ -16,7 +16,7 @@ final class FeedDetailPresenter {
 
     // MARK: - Private properties -
 
-    private unowned var _view: FeedDetailViewInterface
+    private var _view: FeedDetailViewInterface
     private var _interactor: FeedDetailInteractorInterface
     private var _wireframe: FeedDetailWireframeInterface
     

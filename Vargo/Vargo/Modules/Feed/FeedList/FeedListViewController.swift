@@ -23,13 +23,13 @@ final class FeedListViewController: BaseViewController {
 
     // MARK: - Public properties -
 
-    var presenter: FeedListPresenterInterface!
+    var presenter: FeedListPresenterInterface?
 
     // MARK: - Lifecycle -
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.viewDidLoad()
+        presenter?.viewDidLoad()
         setupAccessibility()
     }
 	
@@ -92,11 +92,11 @@ extension FeedListViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        presenter.didSelectItem(at: indexPath)
+        presenter?.didSelectItem(at: indexPath)
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        presenter.willDisplayCell(at: indexPath)
+        presenter?.willDisplayCell(at: indexPath)
     }
 
 }
@@ -107,17 +107,17 @@ extension FeedListViewController: UITableViewDelegate {
 extension FeedListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter.numberOfItems()
+        return presenter?.numberOfItems() ?? 0
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-         return presenter.numberOfSections()
+         return presenter?.numberOfSections() ?? 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as FeedArticleTableViewCell
         cell.feedListItemInteraction = self
-        cell.item = presenter.item(at: indexPath)
+        cell.item = presenter?.item(at: indexPath)
         return cell
     }
     

@@ -14,7 +14,7 @@ final class FeedListPresenter {
 
     // MARK: - Private properties -
 
-    private unowned var _view: FeedListViewInterface
+    private var _view: FeedListViewInterface
     private var _interactor: FeedListInteractorInterface
     private var _wireframe: FeedListWireframeInterface
     
