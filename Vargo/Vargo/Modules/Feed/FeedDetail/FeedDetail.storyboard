@@ -331,6 +331,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="collectionView" destination="859-Wg-LVl" id="L72-pv-DBv"/>
+                        <outlet property="contentView" destination="LQ2-fX-A6L" id="qUH-No-cxL"/>
                         <outlet property="feedItemAuthorsLabel" destination="QIg-Hy-6J9" id="rZ9-lF-oAk"/>
                         <outlet property="feedItemAuthorsTitleLabel" destination="tFU-G1-HGt" id="S3J-Ly-BbZ"/>
                         <outlet property="feedItemBookmarkButton" destination="tFk-3s-FEu" id="KiD-8J-HeD"/>

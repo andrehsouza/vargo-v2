@@ -15,7 +15,6 @@ protocol FeedDetailWireframeInterface: WireframeInterface { }
 protocol FeedDetailViewInterface: ViewInterface {
     var feedContent: FeedItemDetailInterface? { get set }
     func reloadData()
-    func showfeedContent()
     func showWaitingView(with type: FeedDetailLoadingType)
     func scrollCollectionToFirstItem()
     func showRelatedVideosContainer(animating: Bool)

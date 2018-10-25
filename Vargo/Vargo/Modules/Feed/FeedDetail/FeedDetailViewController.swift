@@ -31,6 +31,12 @@ enum FeedDetailLoadingType {
 
 final class FeedDetailViewController: UIViewController {
     
+    @IBOutlet weak var contentView: UIView! {
+        didSet {
+            contentView.isHidden = true
+        }
+    }
+    
     @IBOutlet private weak var feedItemBookmarkButton: UIButton!
     @IBOutlet private weak var shareBarButtonItem: UIBarButtonItem!
     
@@ -77,8 +83,7 @@ final class FeedDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        showfeedContent()
-        setupAccessibility()
+        initialSetup()
     }
     
     @IBAction func touchPlay(_ sender: Any) {
@@ -110,54 +115,7 @@ extension FeedDetailViewController: FeedDetailViewInterface {
     func reloadData() {
         collectionView.reloadData()
     }
-    
-    func showfeedContent() {
-        guard let feedContent = feedContent else {
-            enableNavigationBarButtons(false)
-            return
-        }
-        
-        title = feedContent.screenTitle
-        
-        feedItemPlayerButton.isHidden = !feedContent.isVideo
-        
-        feedItemDateLabel.text = feedContent.date
-        
-        if let urlString = feedContent.imageURL, let url = URL(string: urlString) {
-            feedItemImageView.af_setImage(withURL: url, placeholderImage: UIImage(named: "ic_place_holder"))
-        } else {
-            feedItemImageView.image = UIImage(named: "ic_place_holder")
-        }
-        
-        feedItemTitleLabel.text = feedContent.title
-        feedItemDescriptionLabel.text = feedContent.description
-        
-        feedItemAuthorsTitleLabel.text = feedContent.authorTitle
-        feedItemAuthorsLabel.text = feedContent.author
-        
-        feedItemFontTitleLabel.text = feedContent.urlTitle
-        
-        if let urlDescription = feedContent.urlDescription {
-            feedItemUrlButton.isHidden = false
-            let attText = NSMutableAttributedString(string: urlDescription, attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
-            feedItemUrlButton.setAttributedTitle(attText, for: .normal)
-        } else {
-            feedItemUrlButton.isHidden = true
-        }
-        
-        enableNavigationBarButtons(true)
-        
-        hideRelatedVideosContainer()
-        
-        if feedContent.isVideo {
-            showWaitingView(with: .loading)
-            let deadline = DispatchTime.now() + 0.3
-            DispatchQueue.main.asyncAfter(deadline: deadline) { [weak self] in
-                self?.showRelatedVideosContainer(animating: true)
-            }
-        }
-    }
-    
+
     func showWaitingView(with type: FeedDetailLoadingType) {
         switch type {
         case .loading:
@@ -205,6 +163,61 @@ extension FeedDetailViewController: FeedDetailViewInterface {
 // MARK: - Extensions -
 
 extension FeedDetailViewController {
+    
+    private func initialSetup() {
+        title = ""
+        showfeedContent()
+        setupAccessibility()
+    }
+    
+    private func showfeedContent() {
+        guard let feedContent = feedContent else {
+            enableNavigationBarButtons(false)
+            return
+        }
+        
+        contentView.isHidden = false
+        
+        title = feedContent.screenTitle
+        
+        feedItemPlayerButton.isHidden = !feedContent.isVideo
+        
+        feedItemDateLabel.text = feedContent.date
+        
+        if let urlString = feedContent.imageURL, let url = URL(string: urlString) {
+            feedItemImageView.af_setImage(withURL: url, placeholderImage: UIImage(named: "ic_place_holder"))
+        } else {
+            feedItemImageView.image = UIImage(named: "ic_place_holder")
+        }
+        
+        feedItemTitleLabel.text = feedContent.title
+        feedItemDescriptionLabel.text = feedContent.description
+        
+        feedItemAuthorsTitleLabel.text = feedContent.authorTitle
+        feedItemAuthorsLabel.text = feedContent.author
+        
+        feedItemFontTitleLabel.text = feedContent.urlTitle
+        
+        if let urlDescription = feedContent.urlDescription {
+            feedItemUrlButton.isHidden = false
+            let attText = NSMutableAttributedString(string: urlDescription, attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
+            feedItemUrlButton.setAttributedTitle(attText, for: .normal)
+        } else {
+            feedItemUrlButton.isHidden = true
+        }
+        
+        enableNavigationBarButtons(true)
+        
+        hideRelatedVideosContainer()
+        
+        if feedContent.isVideo {
+            showWaitingView(with: .loading)
+            let deadline = DispatchTime.now() + 0.3
+            DispatchQueue.main.asyncAfter(deadline: deadline) { [weak self] in
+                self?.showRelatedVideosContainer(animating: true)
+            }
+        }
+    }
     
     private func setupCollectionView() {
         collectionView.register(FeedRelatedVideoCollectionViewCell.self)
