@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import Foundation
 
 class VargoUITests: XCTestCase {
     
@@ -29,17 +30,51 @@ class VargoUITests: XCTestCase {
     }
 
     func testShowLoadingOnRequest() {
-        app.activityIndicators["loading"].tap()
+        let loadingView = app.activityIndicators["loadingView"]
+        XCTAssertTrue(loadingView.exists)
     }
     
-    func testTapRow() {
+    func testTapRowAndShareContent() {
         app.tables.cells.firstMatch.tap()
+        app.navigationBars.buttons["shareBarButtonItem"].tap()
+        let activityList = app.otherElements["ActivityListView"]
+        XCTAssertTrue(activityList.exists)
     }
     
-    func testTapRowAndShare() {
-        app.tables.cells.firstMatch.tap()
-        XCUIApplication().navigationBars.buttons["Share"].tap()
-        app.otherElements["ActivityListView"].tap()
+    func testEndlessScrollFeedtableview() {
+        let loadingView = app.activityIndicators["loadingView"]
+        while loadingView.exists {
+            app.swipeUp()
+        }
+    }
+    
+    func testLookForVideoRowAndTapThenClickPlay() {
+        let feedTableView = app.tables["feedTableView"]
+
+        let promise = expectation(description: "Wait for table cells")
+        
+        for i in stride(from: 0, to: feedTableView.cells.count , by: 1) {
+            let tableCell = feedTableView.cells.element(boundBy: i)
+            if tableCell.exists && !tableCell.frame.isEmpty {
+                tableCell.tap()
+                
+                if i == (feedTableView.cells.count - 1) {
+                    promise.fulfill()
+                }
+                
+                app.navigationBars.buttons.element(boundBy: 0).tap()
+            } else {
+                app.swipeUp()
+            }
+        }
+        
+        waitForExpectations(timeout: 20, handler: nil)
+        XCTAssertTrue(true, "Finished validating the table cells")
+    }
+    
+    func testShowFenceViewOnErrorConnection() {
+        let loadingView = app.otherElements["fenceView"]
+        XCTAssertTrue(loadingView.exists)
     }
 
 }

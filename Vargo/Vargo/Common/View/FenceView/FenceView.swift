@@ -19,6 +19,11 @@ class FenceView: UIView {
         showFenceLoadingView()
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setAccessibility()
+    }
+    
 }
 
 extension FenceView {
@@ -42,6 +47,16 @@ extension FenceView {
         }
         
         activityIndicator.stopAnimating()
+    }
+    
+}
+
+
+extension FenceView {
+    
+    //Tests
+    private func setAccessibility() {
+        self.accessibilityIdentifier = "fenceView"
     }
     
 }

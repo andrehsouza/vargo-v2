@@ -32,6 +32,7 @@ enum FeedDetailLoadingType {
 final class FeedDetailViewController: UIViewController {
     
     @IBOutlet private weak var feedItemBookmarkButton: UIButton!
+    @IBOutlet private weak var shareBarButtonItem: UIBarButtonItem!
     
     @IBOutlet private weak var feedItemImageView: VImageView!
     @IBOutlet private weak var feedItemPlayerImageView: UIButton!
@@ -77,6 +78,7 @@ final class FeedDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         showfeedContent()
+        setupAccessibility()
     }
     
     @IBAction func touchPlay(_ sender: Any) {
@@ -217,6 +219,12 @@ extension FeedDetailViewController {
     private func hideRelatedVideosContainer() {
         feedRelatedVideosContainerBottom.constant = feedRelatedVideosContainerHeight.constant
         feedRelatedVideosContainer.isHidden = true
+    }
+    
+    //Tests
+    private func setupAccessibility() {
+        shareBarButtonItem.accessibilityIdentifier = "shareBarButtonItem"
+        feedItemUrlButton.accessibilityIdentifier = "feedUrlButton"
     }
     
 }

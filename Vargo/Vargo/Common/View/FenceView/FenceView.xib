@@ -59,10 +59,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ocorreu um erro, tente novamente" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxt-AG-Efp">
-                            <rect key="frame" x="40" y="293.5" width="295" height="22"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="22" id="elY-ld-7M5"/>
-                            </constraints>
+                            <rect key="frame" x="40" y="293.5" width="295" height="21"/>
                             <fontDescription key="fontDescription" name="SFCompactText-Regular" family="SF Compact Text" pointSize="18"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -78,7 +75,7 @@
                             </userDefinedRuntimeAttributes>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mI8-Ny-iUY" customClass="VButton" customModule="Vargo" customModuleProvider="target">
-                            <rect key="frame" x="50" y="355.5" width="275" height="60"/>
+                            <rect key="frame" x="50" y="354.5" width="275" height="60"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="oRY-e2-Hrx"/>
                             </constraints>
@@ -132,6 +129,6 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_alert" width="64" height="64"/>
+        <image name="ic_alert" width="102.40000152587891" height="102.40000152587891"/>
     </resources>
 </document>
