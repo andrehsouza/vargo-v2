@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27C447E39404A705B5C64A7B /* Pods_VargoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 427EE13C185E346D651FF524 /* Pods_VargoUITests.framework */; };
 		7B652485217F686F0033742D /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B652484217F686F0033742D /* Date+Extensions.swift */; };
 		7B652489217F6C240033742D /* FeedRelatedVideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B652487217F6C230033742D /* FeedRelatedVideoCollectionViewCell.xib */; };
 		7B65248A217F6C240033742D /* FeedRelatedVideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B652488217F6C240033742D /* FeedRelatedVideoCollectionViewCell.swift */; };
@@ -66,6 +67,8 @@
 		7BF528E1217EB95A002F1189 /* FenceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BF528DF217EB95A002F1189 /* FenceView.xib */; };
 		7BF528E5217EBC41002F1189 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF528E4217EBC41002F1189 /* BaseViewController.swift */; };
 		7BF528E7217EBC7B002F1189 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF528E6217EBC7A002F1189 /* UIView+Extension.swift */; };
+		816B7919A587758290101F93 /* Pods_VargoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB2F57D92E2498646D6FFB8 /* Pods_VargoTests.framework */; };
+		C3A2235F51CE74C8E1D9C004 /* Pods_Vargo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6611AAC89F706EF1868E1142 /* Pods_Vargo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,7 +91,9 @@
 /* Begin PBXFileReference section */
 		1E5F38FF0FD9D73C7DA66E3F /* Pods-VargoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VargoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VargoTests/Pods-VargoTests.release.xcconfig"; sourceTree = "<group>"; };
 		35F4420738C03F1AF808EDCF /* Pods-Vargo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vargo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vargo/Pods-Vargo.release.xcconfig"; sourceTree = "<group>"; };
+		427EE13C185E346D651FF524 /* Pods_VargoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VargoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AB0661FDC4C73FB5929B287 /* Pods-VargoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VargoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VargoUITests/Pods-VargoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6611AAC89F706EF1868E1142 /* Pods_Vargo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vargo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71E5C2E49EA86C323967A89D /* Pods-Vargo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vargo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vargo/Pods-Vargo.debug.xcconfig"; sourceTree = "<group>"; };
 		79A5E764093A0CF08E4B918D /* Pods-VargoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VargoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VargoTests/Pods-VargoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B652484217F686F0033742D /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
@@ -157,6 +162,7 @@
 		7BF528E4217EBC41002F1189 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		7BF528E6217EBC7A002F1189 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		8D1ACF890D34B43AA862550A /* Pods-VargoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VargoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VargoUITests/Pods-VargoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9AB2F57D92E2498646D6FFB8 /* Pods_VargoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VargoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3A2235F51CE74C8E1D9C004 /* Pods_Vargo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +178,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				816B7919A587758290101F93 /* Pods_VargoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +186,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27C447E39404A705B5C64A7B /* Pods_VargoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +538,9 @@
 		9CECD17FAF3CCEC7B7BD0782 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6611AAC89F706EF1868E1142 /* Pods_Vargo.framework */,
+				9AB2F57D92E2498646D6FFB8 /* Pods_VargoTests.framework */,
+				427EE13C185E346D651FF524 /* Pods_VargoUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -679,13 +691,11 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Vargo/Pods-Vargo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
-				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
