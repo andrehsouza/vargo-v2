@@ -51,10 +51,3 @@ class FeedArticleTableViewCell: UITableViewCell {
     }
     
 }
-
-extension FeedArticleTableViewCell {
-    //Tests
-    private func setupAccessibility() {
-        playerImageView.accessibilityIdentifier = "videoPlayerImageView"
-    }
-}
